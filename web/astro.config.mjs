@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config'
-import vercel from '@astrojs/vercel/serverless'
 import sanity from 'astro-sanity'
 
 export default defineConfig({
