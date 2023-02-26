@@ -1,0 +1,15 @@
+---
+import Layout from '@components/Layout.astro'
+import { getHomepage } from '@lib/api'
+import PortableText from '@components/PortableText.astro'
+
+const data = await getHomepage()
+---
+
+<Layout
+  metaTitle={data.seo.metaTitle}
+  metaDescription={data.seo.metaDescription}
+  metaImage={data.seo.metaImage}
+>
+  <PortableText portableText={data.description} />
+</Layout>

@@ -1,0 +1,36 @@
+---
+import SEO from '@components/SEO.astro'
+import Header from '@components/Header/index.astro'
+
+export interface Props {
+  metaTitle: string
+  metaDescription: string
+  metaImage?: {
+    alt: string
+    asset: {
+      url: string
+    }
+  }
+}
+
+const { metaTitle, metaDescription, metaImage } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <SEO title={metaTitle} description={metaDescription} image={metaImage} />
+    <script defer src="https://app.tinyanalytics.io/pixel/gEWXCpAoHkAv2kuv"
+    ></script>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
