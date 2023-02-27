@@ -1,16 +1,15 @@
 import { groq, useSanityClient } from 'astro-sanity'
-import { markDefs } from './queries'
+import { richText, seo } from './queries'
 
 export async function getHomepage() {
   const query = groq`*[_type == "homepage"][0] {
       title,
       description[] {
-        ...,
-        ${markDefs}
+        ${richText}
       },
       cta {link {external, internal->{_type, slug}, newTab}, linkText},
       seo {
-        metaTitle, metaImage{alt, asset->{url}}, metaDescription
+       ${seo}
       },
    }`
 

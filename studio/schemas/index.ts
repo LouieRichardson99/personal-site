@@ -8,7 +8,8 @@ import contact from './singletons/contact'
 import seo from './objects/seo'
 import link from './objects/link'
 import navLink from './objects/navLink'
-import portableText from './objects/portableText'
+import richText from './objects/richText'
+import code from './objects/code'
 
 export const schemaTypes = [
   // Documents
@@ -24,5 +25,6 @@ export const schemaTypes = [
   seo,
   link,
   navLink,
-  portableText,
+  richText,
+  code,
 ]

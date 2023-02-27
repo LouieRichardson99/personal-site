@@ -4,9 +4,9 @@ interface InternalLink {
 }
 
 interface Link {
-  external: string | null
-  internal: InternalLink
-  newTab: boolean | null
+  external?: string | null
+  internal?: InternalLink
+  newTab?: boolean | null
 }
 
 interface NavLink {

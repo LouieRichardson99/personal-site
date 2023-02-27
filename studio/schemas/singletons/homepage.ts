@@ -29,7 +29,7 @@ export default defineType({
     },
     {
       name: 'description',
-      type: 'portableText',
+      type: 'richText',
       title: 'Description',
       group: 'pageContent',
     },

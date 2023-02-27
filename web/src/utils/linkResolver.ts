@@ -5,11 +5,11 @@ const linkResolver = (link: Link) => {
     return link.external
   }
 
-  switch (link.internal._type) {
+  switch (link?.internal?._type) {
     case 'homepage':
       return '/'
     case 'page':
-      return `/${link.internal.slug.current}`
+      return `/${link?.internal.slug.current}`
     case 'contact':
       return '/contact'
     default:

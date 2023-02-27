@@ -3,6 +3,7 @@ import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 import {singletonPlugin} from './plugins/settings'
+import {codeInput} from '@sanity/code-input'
 
 // Icons
 import {IoShareSocial} from 'react-icons/io5'
@@ -84,6 +85,7 @@ export default defineConfig({
     }),
     visionTool(),
     singletonPlugin({types: ['homepage', 'header', 'footer', 'socials', 'contact']}), // Add all singleton document types to the array
+    codeInput(),
   ],
 
   schema: {
