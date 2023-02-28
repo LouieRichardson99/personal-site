@@ -1,0 +1,8 @@
+@use './reset';
+@use './breakpoints';
+@use './typography';
+@use './prism';
+
+html {
+  font-family: 'DM Sans', sans-serif;
+}

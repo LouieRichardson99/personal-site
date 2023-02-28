@@ -14,4 +14,12 @@ const {
 } = Astro.props
 ---
 
-<Prism lang={language} code={code} />
+<div class="container">
+  <Prism lang={language} code={code} />
+</div>
+
+<style>
+  .container {
+    margin: 2rem 0;
+  }
+</style>

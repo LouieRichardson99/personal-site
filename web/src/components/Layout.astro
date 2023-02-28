@@ -1,6 +1,7 @@
 ---
 import SEO from '@components/SEO.astro'
 import Header from '@components/Header/index.astro'
+import '@styles/main.scss'
 
 export interface Props {
   metaTitle: string
@@ -26,7 +27,6 @@ const { metaTitle, metaDescription, metaImage } = Astro.props
     <SEO title={metaTitle} description={metaDescription} image={metaImage} />
     <script defer src="https://app.tinyanalytics.io/pixel/gEWXCpAoHkAv2kuv"
     ></script>
-    <link rel="stylesheet" href="prism-theme.css" />
   </head>
   <body>
     <Header />
