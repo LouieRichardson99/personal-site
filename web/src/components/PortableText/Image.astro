@@ -1,0 +1,7 @@
+---
+import urlFor from '@utils/urlFor'
+
+const { node } = Astro.props
+---
+
+<img src={urlFor(node).url()} alt={node.alt} />
