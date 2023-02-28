@@ -9,7 +9,6 @@ import seo from './objects/seo'
 import link from './objects/link'
 import navLink from './objects/navLink'
 import richText from './objects/richText'
-import code from './objects/code'
 
 export const schemaTypes = [
   // Documents
@@ -26,5 +25,4 @@ export const schemaTypes = [
   link,
   navLink,
   richText,
-  code,
 ]

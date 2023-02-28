@@ -43,7 +43,10 @@ export default defineType({
       fields: [{title: 'Alternative Text', name: 'alt', type: 'string'}],
     },
     {
-      type: 'codeField',
+      type: 'code',
+      options: {
+        withFilename: true,
+      },
     },
   ],
 })
