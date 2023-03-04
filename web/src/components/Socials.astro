@@ -21,7 +21,12 @@ const socialIcons: Map = {
     <ul class="list">
       {socialLinks.map((social) => (
         <li>
-          <a href={social.link} class="link" target="_blank">
+          <a
+            href={social.link}
+            class="link"
+            target="_blank"
+            aria-label={`${social._type} link`}
+          >
             <Icon name={socialIcons[social._type]} />
           </a>
         </li>
