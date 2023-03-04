@@ -1,0 +1,8 @@
+---
+import { getHeader } from '@lib/api'
+import Desktop from './Desktop.astro'
+
+const { title, portraitImage, navLinks } = await getHeader()
+---
+
+<Desktop title={title} portraitImage={portraitImage} navLinks={navLinks} />

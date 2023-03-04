@@ -1,0 +1,106 @@
+---
+import Link from '@components/Link.astro'
+import type { Image, NavLink } from '@types'
+import urlFor from '@utils/urlFor'
+
+interface Props {
+  title: string
+  portraitImage: Image
+  navLinks: NavLink[]
+}
+
+const { title, portraitImage, navLinks } = Astro.props
+---
+
+<header class="container">
+  <div class="flex-container">
+    <div class="img-and-name-container">
+      <img src={urlFor(portraitImage).url()} alt={portraitImage.alt} />
+      <a href="/">
+        <h4>
+          {title}
+        </h4>
+      </a>
+    </div>
+    <nav>
+      <ul class="nav-list">
+        {
+          navLinks.map(({ external, internal, newTab, linkText }) => (
+            <li>
+              <Link
+                external={external}
+                internal={internal}
+                newTab={newTab}
+                class="link"
+              >
+                {linkText}
+              </Link>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style lang="scss">
+  @import '@styles/_breakpoints';
+
+  header {
+    display: none;
+
+    @include mq('small') {
+      display: block;
+    }
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    align-items: center;
+  }
+
+  .img-and-name-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    & img {
+      width: 2.5rem;
+      border-radius: 5px;
+    }
+
+    & a {
+      text-decoration: none;
+
+      &:hover {
+        & h4 {
+          color: var(--mid-grey);
+        }
+      }
+
+      & h4 {
+        font-size: 1.375rem;
+        font-weight: 500;
+        color: var(--primary-dark);
+      }
+    }
+  }
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+  }
+
+  .link {
+    color: var(--primary-dark);
+    text-decoration: none;
+    font-size: 1.125rem;
+
+    &:hover {
+      color: var(--mid-grey);
+    }
+  }
+</style>

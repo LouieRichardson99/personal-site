@@ -1,6 +1,6 @@
 ---
+import Link from '@components/Link.astro'
 import type { InternalLink } from '@types'
-import linkResolver from '@utils/linkResolver'
 
 interface Props {
   node: {
@@ -15,13 +15,8 @@ const {
     markDef: { newTab, internal, external }
   }
 } = Astro.props
-
-const href = linkResolver({ newTab, internal, external })
-const rel = href?.startsWith('/') ? undefined : 'noreferrer noopener'
 ---
 
-{href === null && <span>{children[0].text}</span>}
-
-<a href={href} rel={rel} target={newTab ? '_blank' : '_self'}
-  >{children[0].text}</a
->
+<Link external={external} internal={internal} newTab={newTab}>
+  {children[0].text}
+</Link>

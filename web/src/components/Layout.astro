@@ -2,16 +2,13 @@
 import SEO from '@components/SEO.astro'
 import Header from '@components/Header/index.astro'
 import '@styles/main.scss'
+import type { Image } from '@types'
+import Footer from './Footer.astro'
 
 export interface Props {
   metaTitle: string
   metaDescription: string
-  metaImage?: {
-    alt: string
-    asset: {
-      url: string
-    }
-  }
+  metaImage?: Image
 }
 
 const { metaTitle, metaDescription, metaImage } = Astro.props
@@ -33,5 +30,6 @@ const { metaTitle, metaDescription, metaImage } = Astro.props
     <main>
       <slot />
     </main>
+    <Footer />
   </body>
 </html>

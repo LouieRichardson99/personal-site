@@ -2,14 +2,54 @@
 import Layout from '@components/Layout.astro'
 import { getHomepage } from '@lib/api'
 import RichText from '@components/PortableText/RichText.astro'
+import Link from '@components/Link.astro'
+import Socials from '@components/Socials.astro'
 
-const data = await getHomepage()
+const { title, description, cta, seo } = await getHomepage()
 ---
 
 <Layout
-  metaTitle={data.seo.metaTitle}
-  metaDescription={data.seo.metaDescription}
-  metaImage={data.seo.metaImage}
+  metaTitle={seo.metaTitle}
+  metaDescription={seo.metaDescription}
+  metaImage={seo.metaImage}
 >
-  <RichText richText={data.description} />
+  <section>
+    <div class="narrow-container">
+      <h1 class="title">{title}</h1>
+      <RichText richText={description} />
+      <div class="flex-container">
+        <Link
+          external={cta.link.external}
+          internal={cta.link.internal}
+          newTab={cta.link.newTab}
+          class="link"
+        >
+          {cta.linkText}
+        </Link>
+        <Socials />
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<style lang="scss">
+  section {
+    padding: 5rem 0;
+  }
+
+  .title {
+    margin-bottom: 1rem;
+  }
+
+  .flex-container {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .link {
+    text-decoration: none;
+    font-size: 1.125rem;
+  }
+</style>

@@ -35,4 +35,16 @@ interface Image {
   }
 }
 
-export type { InternalLink, Link, NavLink, Slug, Page, Image }
+interface Seo {
+  metaTitle: string
+  metaDescription: string
+  metaImage: Image
+}
+
+interface Header {
+  title: string
+  portraitImage: Image
+  navLinks: NavLink[]
+}
+
+export type { InternalLink, Link, NavLink, Slug, Page, Image, Seo, Header }

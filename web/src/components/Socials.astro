@@ -1,0 +1,61 @@
+---
+import { getSocials } from '@lib/api'
+import { Icon } from 'astro-icon'
+
+const { socialLinks } = await getSocials()
+
+interface Map {
+  [key: string]: string
+}
+
+const socialIcons: Map = {
+  // Used as filename from /src/icons/filename.svg in astro-icon
+  github: 'github',
+  linkedIn: 'linkedin',
+  twitter: 'twitter'
+}
+---
+
+{
+  socialLinks.length > 0 && (
+    <ul class="list">
+      {socialLinks.map((social) => (
+        <li>
+          <a href={social.link} class="link" target="_blank">
+            <Icon name={socialIcons[social._type]} />
+          </a>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+<style lang="scss">
+  .list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    & a {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .link {
+    & svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      object-fit: contain;
+      color: var(--mid-grey);
+      transition: 200ms;
+    }
+
+    &:hover {
+      & svg {
+        color: var(--primary-dark);
+      }
+    }
+  }
+</style>
