@@ -33,8 +33,14 @@ const { title, description, cta, seo } = await getHomepage()
 </Layout>
 
 <style lang="scss">
+  @import '@styles/_breakpoints';
+
   section {
-    padding: 5rem 0;
+    padding: 2rem 0;
+
+    @include mq('small') {
+      padding: 5rem 0;
+    }
   }
 
   .title {

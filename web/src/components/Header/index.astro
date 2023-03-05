@@ -1,8 +1,10 @@
 ---
 import { getHeader } from '@lib/api'
 import Desktop from './Desktop.astro'
+import Mobile from './Mobile.astro'
 
 const { title, portraitImage, navLinks } = await getHeader()
 ---
 
 <Desktop title={title} portraitImage={portraitImage} navLinks={navLinks} />
+<Mobile portraitImage={portraitImage} navLinks={navLinks} />
