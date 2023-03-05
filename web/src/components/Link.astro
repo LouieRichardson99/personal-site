@@ -29,10 +29,15 @@ const rel = href?.startsWith('/') ? undefined : 'noreferrer noopener'
 
 <style lang="scss">
   a {
+    text-decoration-line: underline;
+    text-decoration-color: #c7c7c7;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    transition: 300ms;
     color: var(--primary-blue);
-    transition: 200ms;
 
     &:hover {
+      text-decoration-color: var(--primary-dark);
       color: var(--secondary-blue);
     }
   }
