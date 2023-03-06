@@ -8,7 +8,7 @@
   --primary-dark: #181818;
   --primary-blue: #314b9a;
   --secondary-blue: #16307e;
-  --mid-grey: #4e4f54;
+  --mid-grey: #374151;
 }
 
 html {
@@ -17,5 +17,5 @@ html {
 }
 
 .flow > * + * {
-  margin-top: var(--flow-space, 1em);
+  margin-top: var(--flow-space, 1.25em);
 }
