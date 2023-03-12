@@ -11,55 +11,48 @@
 
 /* DM Sans */
 @font-face {
-  font-family: 'DM Sans', sans-serif;
-  src: url(../../public/fonts/DMSans-Regular.ttf) format('ttf');
+  font-family: 'Inter', sans-serif;
+  src: url(../../public/fonts/Inter-Light.ttf) format('ttf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter', sans-serif;
+  src: url(../../public/fonts/Inter-Regular.ttf) format('ttf');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'DM Sans', sans-serif;
-  src: url(../../public/fonts/DMSans-Italic.ttf) format('ttf');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'DM Sans', sans-serif;
-  src: url(../../public/fonts/DMSans-Medium.ttf) format('ttf');
+  font-family: 'Inter', sans-serif;
+  src: url(../../public/fonts/Inter-Medium.ttf) format('ttf');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'DM Sans', sans-serif;
-  src: url(../../public/fonts/DMSans-MediumItalic.ttf) format('ttf');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'DM Sans', sans-serif;
-  src: url(../../public/fonts/DMSans-Bold.ttf) format('ttf');
-  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  src: url(../../public/fonts/Inter-SemiBold.ttf) format('ttf');
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'DM Sans', sans-serif;
-  src: url(../../public/fonts/DMSans-BoldItalic.ttf) format('ttf');
+  font-family: 'Inter', sans-serif;
+  src: url(../../public/fonts/Inter-Bold.ttf) format('ttf');
   font-weight: 700;
-  font-style: italic;
+  font-style: normal;
   font-display: swap;
 }
 
 h1 {
   font-size: 2rem;
+  line-height: 1.4;
 
   @include mq('small') {
     font-size: 2.5rem;
