@@ -1,5 +1,6 @@
 <footer>
   <div class="text-wrapper container">
+    <a href="/sitemap-index.xml" class="sitemap">Sitemap</a>
     <p class="copyright">© {new Date().getFullYear()} Louie Richardson</p>
   </div>
 </footer>
@@ -9,9 +10,15 @@
     padding: 1rem 0;
   }
 
+  .sitemap {
+    color: var(--mid-grey);
+    font-size: 0.875rem;
+    text-decoration: none;
+  }
+
   .text-wrapper {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 
   .copyright {
