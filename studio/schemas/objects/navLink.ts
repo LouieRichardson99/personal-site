@@ -18,6 +18,10 @@ export default defineType({
       placeholder: 'https://www.example.com',
       title: 'External',
       hidden: ({parent, value}) => !value && !!parent?.internal,
+      validation: (rule) =>
+        rule.uri({
+          scheme: ['http', 'https', 'mailto', 'tel'],
+        }),
     },
     {
       name: 'newTab',
