@@ -73,18 +73,20 @@ const { title, portraitImage, navLinks } = Astro.props
 
     & a {
       text-decoration: none;
-      transition: color 300ms;
 
-      &:hover {
-        & h4 {
-          color: var(--mid-grey);
-        }
-      }
+      transition-property: color;
+      transition-duration: 300ms;
 
       & h4 {
         font-size: 1.375rem;
         font-weight: 500;
         color: var(--primary-dark);
+      }
+
+      &:hover {
+        & h4 {
+          color: var(--mid-grey);
+        }
       }
     }
   }
