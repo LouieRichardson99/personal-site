@@ -9,9 +9,10 @@ export interface Props {
   metaTitle: string
   metaDescription: string
   metaImage?: Image
+  noIndex?: boolean
 }
 
-const { metaTitle, metaDescription, metaImage } = Astro.props
+const { metaTitle, metaDescription, metaImage, noIndex } = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -20,6 +21,7 @@ const { metaTitle, metaDescription, metaImage } = Astro.props
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    {noIndex && <meta name="robots" content="noindex" />}
     <meta name="generator" content={Astro.generator} />
     <SEO title={metaTitle} description={metaDescription} image={metaImage} />
     <script defer src="https://app.tinyanalytics.io/pixel/gEWXCpAoHkAv2kuv"

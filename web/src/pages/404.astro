@@ -1,0 +1,56 @@
+---
+import Layout from '@components/Layout.astro'
+---
+
+<Layout
+  metaTitle="404 - Page not found"
+  metaDescription="The page you were looking for unfortunately does not exist"
+  metaImage={undefined}
+  noIndex={true}
+>
+  <section>
+    <div class="narrow-container">
+      <h1 class="title">Page not found</h1>
+      <p class="description">
+        The page you were looking for unfortunately does not exist.
+      </p>
+      <a href="/" class="link">Return to the homepage</a>
+    </div>
+  </section>
+</Layout>
+
+<style lang="scss">
+  @import '@styles/_breakpoints';
+
+  section {
+    padding: 2rem 0;
+
+    @include mq('small') {
+      padding: 5rem 0;
+    }
+  }
+
+  .title {
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    margin-bottom: 1rem;
+  }
+
+  .link {
+    color: var(--primary-blue);
+    text-decoration-line: underline;
+    text-decoration-color: #c7c7c7;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+
+    transition-property: color, text-decoration-color;
+    transition-duration: 300ms;
+
+    &:hover {
+      text-decoration-color: var(--mid-grey);
+      color: var(--secondary-blue);
+    }
+  }
+</style>
