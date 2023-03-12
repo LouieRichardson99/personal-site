@@ -13,6 +13,10 @@ export default defineType({
       placeholder: 'https://www.example.com',
       title: 'External',
       hidden: ({parent, value}) => !value && !!parent?.internal,
+      validation: ({uri}) =>
+        uri({
+          scheme: ['http', 'https', 'mailto', 'tel'],
+        }),
     },
     {
       name: 'internal',
