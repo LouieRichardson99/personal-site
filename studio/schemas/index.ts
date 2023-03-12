@@ -3,7 +3,6 @@ import page from './documents/page'
 import homepage from './singletons/homepage'
 import header from './singletons/header'
 import socials from './singletons/socials'
-import contact from './singletons/contact'
 
 import seo from './objects/seo'
 import link from './objects/link'
@@ -18,7 +17,6 @@ export const schemaTypes = [
   homepage,
   header,
   socials,
-  contact,
 
   // Objects
   seo,

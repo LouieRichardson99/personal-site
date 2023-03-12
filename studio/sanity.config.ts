@@ -8,9 +8,8 @@ import {codeInput} from '@sanity/code-input'
 // Icons
 import {IoShareSocial} from 'react-icons/io5'
 import {TbDirections} from 'react-icons/tb'
-import {RiLayoutTop2Line, RiLayoutBottom2Line} from 'react-icons/ri'
-import {AiOutlineHome, AiOutlinePhone} from 'react-icons/ai'
-import {MdQuestionAnswer, MdRateReview} from 'react-icons/md'
+import {RiLayoutTop2Line} from 'react-icons/ri'
+import {AiOutlineHome} from 'react-icons/ai'
 import {TfiWorld} from 'react-icons/tfi'
 import {CgWebsite} from 'react-icons/cg'
 
@@ -39,11 +38,6 @@ export default defineConfig({
                       .id('homepage')
                       .schemaType('homepage')
                       .icon(AiOutlineHome),
-                    S.documentListItem()
-                      .title('Contact')
-                      .id('contact')
-                      .schemaType('contact')
-                      .icon(AiOutlinePhone),
                     S.listItem()
                       .title('Other Pages')
                       .id('other-pages')
@@ -84,7 +78,7 @@ export default defineConfig({
           ]),
     }),
     visionTool(),
-    singletonPlugin({types: ['homepage', 'header', 'footer', 'socials', 'contact']}), // Add all singleton document types to the array
+    singletonPlugin({types: ['homepage', 'header', 'footer', 'socials']}), // Add all singleton document types to the array
     codeInput(),
   ],
 

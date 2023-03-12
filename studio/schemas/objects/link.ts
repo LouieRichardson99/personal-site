@@ -13,8 +13,8 @@ export default defineType({
       placeholder: 'https://www.example.com',
       title: 'External',
       hidden: ({parent, value}) => !value && !!parent?.internal,
-      validation: ({uri}) =>
-        uri({
+      validation: (rule) =>
+        rule.uri({
           scheme: ['http', 'https', 'mailto', 'tel'],
         }),
     },
@@ -22,7 +22,7 @@ export default defineType({
       name: 'internal',
       type: 'reference',
       title: 'Internal',
-      to: [{type: 'homepage'}, {type: 'contact'}, {type: 'page'}],
+      to: [{type: 'homepage'}, {type: 'page'}],
       hidden: ({parent, value}) => !value && !!parent?.external,
     },
     {

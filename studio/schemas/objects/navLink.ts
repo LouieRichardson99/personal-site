@@ -29,7 +29,7 @@ export default defineType({
       name: 'internal',
       type: 'reference',
       title: 'Internal',
-      to: [{type: 'homepage'}, {type: 'contact'}, {type: 'page'}],
+      to: [{type: 'homepage'}, {type: 'page'}],
       hidden: ({parent, value}) => !value && !!parent?.external,
     },
   ],
