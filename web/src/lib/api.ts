@@ -1,6 +1,6 @@
 import { groq, useSanityClient } from 'astro-sanity'
 import { richText, seo } from './queries'
-import type { Header, Link, Seo } from '@types'
+import type { BlogPost, Header, Link, Seo } from '@types'
 import type { PortableTextBlock } from '@portabletext/types'
 
 interface Homepage {
@@ -46,6 +46,25 @@ export async function getSocials(): Promise<Socials> {
 
 export async function getAllPages() {
   const query = groq`*[_type == "page"]`
+
+  const data = await useSanityClient().fetch(query)
+  return data
+}
+
+export async function getAllBlogPosts(): Promise<BlogPost[]> {
+  const query = groq`*[_type == "blogPost"]`
+
+  const data = await useSanityClient().fetch(query)
+  return data
+}
+
+export async function getBlogPage() {
+  const query = groq`*[_type == "blog"][0] {
+    title,
+    seo {
+      ${seo}
+    }
+  }`
 
   const data = await useSanityClient().fetch(query)
   return data

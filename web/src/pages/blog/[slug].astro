@@ -1,0 +1,42 @@
+---
+import Layout from '@components/Layout.astro'
+import RichText from '@components/PortableText/RichText.astro'
+import { getAllBlogPosts } from '@lib/api'
+import type { BlogPost } from '@types'
+
+export async function getStaticPaths() {
+  const allPosts: BlogPost[] = await getAllBlogPosts()
+
+  return allPosts.map((page: BlogPost) => ({
+    params: { slug: page.slug.current },
+    props: { page }
+  }))
+}
+
+const {
+  page: { title, richText, seo }
+} = Astro.props
+---
+
+<Layout
+  metaTitle={seo.metaTitle}
+  metaDescription={seo.metaDescription}
+  metaImage={seo.metaImage}
+>
+  <section class="narrow-container">
+    <h1>{title}</h1>
+    <div class="richText">
+      <RichText richText={richText} />
+    </div>
+  </section>
+</Layout>
+
+<style lang="scss">
+  h1 {
+    margin: 2rem 0;
+  }
+
+  .richText {
+    margin-bottom: 4rem;
+  }
+</style>

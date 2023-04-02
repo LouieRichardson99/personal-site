@@ -1,0 +1,65 @@
+---
+import Layout from '@components/Layout.astro'
+import { getAllBlogPosts, getBlogPage } from '@lib/api'
+import type { BlogPost } from '@types'
+
+const posts: BlogPost[] = await getAllBlogPosts()
+const { title, seo } = await getBlogPage()
+---
+
+<Layout
+  metaTitle={seo.metaTitle}
+  metaDescription={seo.metaDescription}
+  metaImage={seo?.metaImage}
+>
+  <section>
+    <div class="narrow-container">
+      {title && <h1 class="title">{title}</h1>}
+      <ul>
+        {
+          posts.map((post: BlogPost) => (
+            <li>
+              <a href={`/blog/${post.slug.current}`}>{post.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <style lang="scss">
+    @import '@styles/_breakpoints';
+
+    section {
+      padding: 2rem 0;
+
+      @include mq('small') {
+        padding: 5rem 0;
+      }
+    }
+
+    .title {
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      list-style: none;
+
+      & a {
+        color: var(--primary-blue);
+        text-decoration-line: underline;
+        text-decoration-color: #c7c7c7;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 3px;
+
+        transition-property: color, text-decoration-color;
+        transition-duration: 300ms;
+
+        &:hover {
+          text-decoration-color: var(--mid-grey);
+          color: var(--secondary-blue);
+        }
+      }
+    }
+  </style>
+</Layout>

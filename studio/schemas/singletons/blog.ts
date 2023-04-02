@@ -4,8 +4,8 @@ import {RiArticleLine} from 'react-icons/ri'
 import {SiGooglesearchconsole} from 'react-icons/si'
 
 export default defineType({
-  name: 'page',
-  title: 'Page',
+  name: 'blog',
+  title: 'Blog',
   type: 'document',
   icon: DocumentIcon,
   groups: [
@@ -23,23 +23,7 @@ export default defineType({
   ],
   fields: [
     // Page Content
-    {
-      name: 'title',
-      type: 'string',
-      title: 'Title',
-      group: 'pageContent',
-    },
-    {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
-      group: 'pageContent',
-      validation: (Rule) => [Rule.required()],
-    },
+    {name: 'title', type: 'string', title: 'Title', group: 'pageContent'},
     // SEO
     {
       name: 'seo',

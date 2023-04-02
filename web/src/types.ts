@@ -1,3 +1,5 @@
+import type { PortableTextBlock } from '@portabletext/types'
+
 interface InternalLink {
   _type: string
   slug: { _type: string; current: string }
@@ -26,6 +28,12 @@ interface Page {
   slug: Slug
 }
 
+interface BlogPost {
+  title: string
+  slug: Slug
+  richText: PortableTextBlock[]
+}
+
 interface Image {
   _type: string
   alt: string
@@ -47,4 +55,14 @@ interface Header {
   navLinks: NavLink[]
 }
 
-export type { InternalLink, Link, NavLink, Slug, Page, Image, Seo, Header }
+export type {
+  InternalLink,
+  Link,
+  NavLink,
+  Slug,
+  Page,
+  Image,
+  Seo,
+  Header,
+  BlogPost
+}

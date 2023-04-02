@@ -12,6 +12,8 @@ import {RiLayoutTop2Line} from 'react-icons/ri'
 import {AiOutlineHome} from 'react-icons/ai'
 import {TfiWorld} from 'react-icons/tfi'
 import {CgWebsite} from 'react-icons/cg'
+import {IoDocumentsOutline} from 'react-icons/io5'
+import {TbWriting} from 'react-icons/tb'
 
 export default defineConfig({
   name: 'default',
@@ -38,6 +40,32 @@ export default defineConfig({
                       .id('homepage')
                       .schemaType('homepage')
                       .icon(AiOutlineHome),
+                    S.listItem()
+                      .title('Blog')
+                      .id('blog')
+                      .child(
+                        S.list()
+                          .id('Blog')
+                          .items([
+                            S.listItem()
+                              .title('Blog Page')
+                              .id('blog-page')
+                              .icon(TbWriting)
+                              .child(
+                                S.document().title('Blog Page').id('blogPage').schemaType('blog')
+                              ),
+                            S.listItem()
+                              .title('Blog Posts')
+                              .id('blog-posts')
+                              .icon(IoDocumentsOutline)
+                              .child(
+                                S.documentTypeList('blogPost')
+                                  .title('Blog Posts')
+                                  .filter('_type == "blogPost"')
+                              ),
+                          ])
+                      ),
+
                     S.listItem()
                       .title('Other Pages')
                       .id('other-pages')

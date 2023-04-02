@@ -12,6 +12,10 @@ const linkResolver = (link: Link) => {
       return `/${link?.internal.slug.current}`
     case 'contact':
       return '/contact'
+    case 'blog':
+      return '/blog'
+    case 'blogPost':
+      return `/blog/${link?.internal.slug.current}`
     default:
       return null
   }
