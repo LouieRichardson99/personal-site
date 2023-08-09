@@ -9,7 +9,7 @@
   font-display: swap;
 }
 
-/* DM Sans */
+/* Inter */
 @font-face {
   font-family: 'Inter', sans-serif;
   src: url(../../public/fonts/Inter-Light.ttf) format('ttf');
@@ -67,4 +67,20 @@ p {
   font-size: 1.125rem;
   line-height: 1.75rem;
   color: var(--mid-grey);
+}
+
+.link {
+  color: var(--primary-blue);
+  text-decoration-line: underline;
+  text-decoration-color: #c7c7c7;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+
+  transition-property: color, text-decoration-color;
+  transition-duration: 300ms;
+
+  &:hover {
+    text-decoration-color: var(--mid-grey);
+    color: var(--secondary-blue);
+  }
 }
