@@ -1,5 +1,5 @@
 ---
-import Link from '@components/Link.astro'
+import LinkComponent from '@components/Link.astro'
 import type { InternalLink } from '@types'
 
 interface Props {
@@ -17,6 +17,6 @@ const {
 } = Astro.props
 ---
 
-<Link external={external} internal={internal} newTab={newTab}>
+<LinkComponent external={external} internal={internal} newTab={newTab}>
   {children[0].text}
-</Link>
+</LinkComponent>
