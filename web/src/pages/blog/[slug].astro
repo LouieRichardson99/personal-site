@@ -24,19 +24,19 @@ const {
   metaImage={seo.metaImage}
 >
   <section class="narrow-container">
-    <h1>{title}</h1>
-    <div class="richText">
+    <h1 class="title">{title}</h1>
+    <div class="rich-text">
       <RichText richText={richText} />
     </div>
   </section>
 </Layout>
 
 <style lang="scss">
-  h1 {
+  .title {
     margin: 2rem 0;
   }
 
-  .richText {
+  .rich-text {
     margin-bottom: 4rem;
   }
 </style>
