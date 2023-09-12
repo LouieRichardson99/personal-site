@@ -66,7 +66,7 @@ a {
 p {
   font-size: 1.125rem;
   line-height: 1.75rem;
-  color: var(--mid-grey);
+  color: var(--dark-grey);
 }
 
 .link {
@@ -80,7 +80,7 @@ p {
   transition-duration: 300ms;
 
   &:hover {
-    text-decoration-color: var(--mid-grey);
+    text-decoration-color: var(--dark-grey);
     color: var(--secondary-blue);
   }
 }
