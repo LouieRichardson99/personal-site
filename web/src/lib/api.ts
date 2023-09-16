@@ -52,7 +52,7 @@ export async function getAllPages() {
 }
 
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
-  const query = groq`*[_type == "blogPost"]`
+  const query = groq`*[_type == "blogPost"] | order(_createdAt desc)`
 
   const data = await useSanityClient().fetch(query)
   return data
