@@ -22,6 +22,9 @@ const { title, seo } = await getBlogPage()
               <a class="link" href={`/blog/${post.slug.current}`}>
                 {post.title}
               </a>
+              <time datetime={`${post._createdAt}`}>
+                {new Date(post._createdAt).toLocaleDateString()}
+              </time>
             </li>
           ))
         }
@@ -48,7 +51,14 @@ const { title, seo } = await getBlogPage()
       list-style: none;
 
       li {
-        margin-bottom: 1rem;
+        margin-bottom: 1.25rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      time {
+        opacity: 0.75;
       }
     }
   </style>

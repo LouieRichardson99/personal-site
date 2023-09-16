@@ -32,6 +32,7 @@ interface BlogPost {
   title: string
   slug: Slug
   richText: PortableTextBlock[]
+  _createdAt: Date
 }
 
 interface Image {

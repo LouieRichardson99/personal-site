@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 }
 
 const {
-  page: { title, richText, seo }
+  page: { title, richText, seo, _createdAt }
 } = Astro.props
 ---
 
@@ -24,7 +24,17 @@ const {
   metaImage={seo.metaImage}
 >
   <section class="narrow-container">
+    <time>
+      {
+        new Date(_createdAt).toLocaleDateString('en-GB', {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric'
+        })
+      }
+    </time>
     <h1 class="title">{title}</h1>
+
     <div class="rich-text">
       <RichText richText={richText} />
     </div>
@@ -32,11 +42,17 @@ const {
 </Layout>
 
 <style lang="scss">
+  time {
+    margin-top: 3rem;
+    display: block;
+    opacity: 0.75;
+  }
+
   .title {
-    margin: 2rem 0;
+    margin: 1rem 0 2rem 0;
   }
 
   .rich-text {
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
   }
 </style>
