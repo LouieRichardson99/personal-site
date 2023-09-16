@@ -3,10 +3,11 @@
 	"type": "module",
 	"version": "1.0.0",
 	"scripts": {
-		"dev": "bunx --bun astro dev",
-		"build": "bunx --bun astro build",
-		"preview": "bunx --bun astro preview",
-		"astro": "bunx --bun astro"
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
 	},
 	"dependencies": {
 		"@astrojs/prism": "^2.0.0",
