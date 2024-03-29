@@ -18,5 +18,8 @@
 		"autoprefixer": "^10.4.19",
 		"cssnano": "^6.1.2",
 		"sass": "^1.72.0"
+	},
+	"optionalDependencies": {
+		"@rollup/rollup-linux-x64-gnu": "^4.13.2"
 	}
 }
