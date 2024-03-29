@@ -1,0 +1,56 @@
+@use './reset';
+@use './breakpoints';
+@use './typography';
+@import './breakpoints';
+
+:root {
+  --color-bg: hsl(0, 0%, 5%);
+  --color-fg: hsl(0, 0%, 95%);
+
+  @media (prefers-color-scheme: light) {
+    --color-bg: hsl(0, 0%, 95%);
+    --color-fg: hsl(0, 0%, 5%);
+  }
+}
+
+html {
+  font-family: 'Geist', sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+
+main {
+  padding: 2rem 0;
+}
+
+.container {
+  padding: 0 1rem;
+  max-width: 50rem;
+  margin: 0 auto;
+
+  @include mq('small') {
+    padding: 0 1.5rem;
+  }
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1.25em);
+}
+
+.rich-text {
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: contain;
+  }
+}
+
+code {
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  font-family: 'Fira Code';
+}

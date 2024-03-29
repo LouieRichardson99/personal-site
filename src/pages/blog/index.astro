@@ -1,0 +1,78 @@
+---
+import Layout from '@components/Layout.astro'
+import type { CollectionEntry } from 'astro:content'
+import { getCollection } from 'astro:content'
+
+interface Props {
+  allBlogPosts: CollectionEntry<'blog'>
+}
+
+const allBlogPosts = await getCollection('blog')
+---
+
+<Layout
+  metaTitle="Blog | Louie Richardson"
+  metaDescription="Writing mainly about development and anything else that interests me."
+>
+  <section>
+    <h1 class="title">Blog Posts</h1>
+    <ul>
+      {
+        allBlogPosts.map((post) => (
+          <li>
+            <time datetime={`${post.data.publishDate}`}>
+              {new Date(post.data.publishDate).toLocaleDateString()}
+            </time>
+            <a class="link" href={`/blog/${post.slug}`}>
+              {post.data.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>
+
+<style lang="scss">
+  @import '@styles/_breakpoints';
+
+  section {
+    padding: 2rem 0;
+
+    @include mq('small') {
+      padding: 5rem 0;
+    }
+  }
+
+  .title {
+    margin-bottom: 2rem;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-bottom: 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      @include mq('small') {
+        flex-direction: row;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    time {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 300;
+      opacity: 0.5;
+
+      @include mq('small') {
+        order: 2;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,32 @@
+<header>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="mailto:louie@louierichardson.com">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style lang="scss">
+  header {
+    padding: 1.5rem 0;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+  }
+
+  a {
+    font-weight: 300;
+    color: var(--color-fg);
+    text-decoration: none;
+    transition: 250ms opacity ease;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+</style>

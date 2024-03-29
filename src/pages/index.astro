@@ -1,0 +1,47 @@
+---
+import Layout from '@components/Layout.astro'
+---
+
+<Layout
+  metaTitle="Louie Richardson | Front-end Developer and Designer"
+  metaDescription="Hey, I'm Louie, a front-end developer at Bump Digital. I have experience creating marketing sites and web applications using cutting-edge technologies."
+>
+  <section>
+    <h1 class="title">👋🏻 Hey there, I'm Louie</h1>
+    <div class="rich-text flow">
+      <p>
+        I'm currently a front-end developer at <a
+          href="https://bump.digital"
+          target="_blank">Bump Digital</a
+        >. I have experience creating marketing sites and web applications using
+        cutting-edge technologies. Additionally, I have experience integrating
+        headless CMS platforms like Prismic and Sanity to ensure seamless
+        content management for marketing teams.
+      </p>
+      <p>
+        I've worked with digital agencies as a front-end developer;
+        collaborating with multiple stakeholders, including developers and
+        designers, which has allowed me to deliver high-quality results to
+        clients.
+      </p>
+    </div>
+    <div class="flex-container">
+      <a href="mailto:louie@louierichardson.com">Get in touch</a>
+    </div>
+  </section>
+</Layout>
+
+<style lang="scss">
+  @import '@styles/_breakpoints';
+
+  .title {
+    margin-bottom: 1rem;
+  }
+
+  .flex-container {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>

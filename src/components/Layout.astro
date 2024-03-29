@@ -1,0 +1,33 @@
+---
+import SEO from '@components/SEO.astro'
+import Header from '@components/Header.astro'
+import Footer from '@components/Footer.astro'
+import '@styles/main.scss'
+
+interface Props {
+  metaTitle: string
+  metaDescription: string
+  noIndex?: boolean
+}
+
+const { metaTitle, metaDescription, noIndex } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <SEO title={metaTitle} description={metaDescription} />
+    {noIndex && <meta name="robots" content="noindex" />}
+  </head>
+  <body class="container">
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
