@@ -30,9 +30,10 @@ const { Content } = await post.render()
         })
       }
     </time>
-    <div class="rich-text flow">
+    <h1 class="title">{post.data.title}</h1>
+    <article class="rich-text flow">
       <Content />
-    </div>
+    </article>
   </section>
 </Layout>
 
@@ -46,6 +47,6 @@ const { Content } = await post.render()
   }
 
   .title {
-    margin: 1rem 0 2rem 0;
+    margin-bottom: 2rem;
   }
 </style>

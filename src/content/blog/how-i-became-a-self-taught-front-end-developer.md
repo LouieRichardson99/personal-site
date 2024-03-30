@@ -4,8 +4,6 @@ description: "Let's discuss my journey to becoming a self-taught front-end devel
 publishDate: 2023-09-11
 ---
 
-# How I Became a Self-taught Front-end Developer
-
 It was the middle of summer and I was on vacation in northern France, and I suddenly thought to myself, "why don’t I become a developer?". I had no set career path at the time, and no clue what I actually wanted to do with my life. The twenty year old me who was feeling a bit lost in life took the plunge into this mysterious world with many unanswered questions. Lots of questions were surfacing to the top of my mind; Do I need a degree? Where do I start? Should I join one of those bootcamps? How long will this even take? The list goes on…
 
 I tried to learn how to code in the past but failed miserably so why would this time be any different? Well the answer was simple… My past approach and mindset to learning how to code was all wrong and il explain why.

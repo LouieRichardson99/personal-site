@@ -4,8 +4,6 @@ description: 'Looking back at 2023; it was a great year in terms of my career an
 publishDate: 2024-01-02
 ---
 
-# 2023: Year In-Review
-
 Looking back at 2023; it was a great year in terms of my career and personal development. As we progress through the year accomplishing small wins, we don't truly appreciate how much we have achieved until we sit down to reflect.
 
 I started the year off strong and finished up a project with a client who wanted to improve their web presence for their 2D animation studio in Bristol. I was freelancing before this with other digital agencies, but this was special because it was my first client who I worked with directly.

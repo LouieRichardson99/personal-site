@@ -49,8 +49,14 @@ main {
   }
 }
 
-code {
-  padding: 0.25rem 0.5rem;
-  font-size: 1rem;
-  font-family: 'Fira Code';
+.astro-code {
+  margin: 2.5rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #2e2e2e;
+
+  code {
+    font-family: 'Fira Code';
+    font-size: 1rem;
+  }
 }
