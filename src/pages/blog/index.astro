@@ -1,13 +1,13 @@
 ---
-import Layout from '@components/Layout.astro'
-import type { CollectionEntry } from 'astro:content'
-import { getCollection } from 'astro:content'
+import Layout from "@components/Layout.astro";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 
 interface Props {
-  allBlogPosts: CollectionEntry<'blog'>
+  allBlogPosts: CollectionEntry<"blog">;
 }
 
-const allBlogPosts = await getCollection('blog')
+const allBlogPosts = await getCollection("blog");
 ---
 
 <Layout
@@ -34,12 +34,12 @@ const allBlogPosts = await getCollection('blog')
 </Layout>
 
 <style lang="scss">
-  @import '@styles/_breakpoints';
+  @import "@styles/_breakpoints";
 
   section {
     padding: 2rem 0;
 
-    @include mq('small') {
+    @include mq("small") {
       padding: 5rem 0;
     }
   }
@@ -58,7 +58,7 @@ const allBlogPosts = await getCollection('blog')
       flex-direction: column;
       gap: 0.5rem;
 
-      @include mq('small') {
+      @include mq("small") {
         flex-direction: row;
         margin-bottom: 1.5rem;
       }
@@ -70,7 +70,7 @@ const allBlogPosts = await getCollection('blog')
       font-weight: 300;
       opacity: 0.5;
 
-      @include mq('small') {
+      @include mq("small") {
         order: 2;
       }
     }

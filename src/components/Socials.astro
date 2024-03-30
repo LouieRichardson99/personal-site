@@ -1,19 +1,31 @@
-<!-- ---
-import { getSocials } from '@lib/api'
-import { Icon } from 'astro-icon/components'
-
-const { socialLinks } = await getSocials()
+---
+import { Icon } from "astro-icon/components";
 
 interface Map {
-  [key: string]: string
+  [key: string]: string;
 }
 
 const socialIcons: Map = {
   // Used as filename from /src/icons/filename.svg in astro-icon
-  github: 'github',
-  linkedIn: 'linkedin',
-  x: 'x'
-}
+  github: "github",
+  linkedIn: "linkedin",
+  x: "x",
+};
+
+const socialLinks = [
+  {
+    type: "github",
+    link: "https://github.com/LouieRichardson99",
+  },
+  {
+    type: "linkedIn",
+    link: "https://www.linkedin.com/in/louie-richardson/",
+  },
+  {
+    type: "x",
+    link: "https://twitter.com/Louie_Rich99",
+  },
+];
 ---
 
 {
@@ -21,13 +33,8 @@ const socialIcons: Map = {
     <ul class="list">
       {socialLinks.map((social) => (
         <li>
-          <a
-            href={social.link}
-            class="link"
-            target="_blank"
-            aria-label={`${social._type} link`}
-          >
-            <Icon name={socialIcons[social._type]} />
+          <a href={social.link} class="link" aria-label={`${social.type} link`}>
+            <Icon name={socialIcons[social.type]} />
           </a>
         </li>
       ))}
@@ -39,28 +46,28 @@ const socialIcons: Map = {
   .list {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 0.75rem;
     align-items: center;
 
-    & a {
+    a {
       display: flex;
       align-items: center;
     }
   }
 
   .link {
-    & svg {
-      width: 1.5rem;
-      height: 1.5rem;
+    svg {
+      width: 1.25rem;
+      height: 1.25rem;
       object-fit: contain;
-      color: var(--dark-grey);
-      transition: 200ms;
+      color: var(--color-fg);
+      transition: 200ms all ease;
     }
 
     &:hover {
-      & svg {
-        color: var(--primary-dark);
+      svg {
+        opacity: 0.85;
       }
     }
   }
-</style> -->
+</style>

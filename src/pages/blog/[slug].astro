@@ -1,32 +1,32 @@
 ---
-import Layout from '@components/Layout.astro'
-import { getCollection } from 'astro:content'
-import type { CollectionEntry } from 'astro:content'
+import Layout from "@components/Layout.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
 
 interface Props {
-  post: CollectionEntry<'blog'>
+  post: CollectionEntry<"blog">;
 }
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('blog')
+  const blogEntries = await getCollection("blog");
   return blogEntries.map((post) => ({
     params: { slug: post.slug },
-    props: { post }
-  }))
+    props: { post },
+  }));
 }
 
-const { post } = Astro.props
-const { Content } = await post.render()
+const { post } = Astro.props;
+const { Content } = await post.render();
 ---
 
 <Layout metaTitle={post.data.title} metaDescription={post.data.description}>
   <section>
     <time>
       {
-        new Date(post.data.publishDate).toLocaleDateString('en-GB', {
-          day: 'numeric',
-          month: 'long',
-          year: 'numeric'
+        new Date(post.data.publishDate).toLocaleDateString("en-GB", {
+          day: "numeric",
+          month: "long",
+          year: "numeric",
         })
       }
     </time>

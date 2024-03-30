@@ -1,9 +1,11 @@
-@use './reset';
-@use './breakpoints';
-@use './typography';
-@import './breakpoints';
+@use "./reset";
+@use "./breakpoints";
+@use "./typography";
+@import "./breakpoints";
 
 :root {
+  --bright-blue: hsl(200, 90%, 50%);
+
   --color-bg: hsl(0, 0%, 5%);
   --color-fg: hsl(0, 0%, 95%);
 
@@ -14,7 +16,7 @@
 }
 
 html {
-  font-family: 'Geist', sans-serif;
+  font-family: "Geist", sans-serif;
 }
 
 body {
@@ -31,7 +33,7 @@ main {
   max-width: 50rem;
   margin: 0 auto;
 
-  @include mq('small') {
+  @include mq("small") {
     padding: 0 1.5rem;
   }
 }
@@ -53,10 +55,10 @@ main {
   margin: 2.5rem 0;
   padding: 0.75rem 1rem;
   border-radius: 5px;
-  border: 1px solid #2e2e2e;
+  border: 1px solid hsl(0, 0%, 18%);
 
   code {
-    font-family: 'Fira Code';
+    font-family: "Fira Code";
     font-size: 1rem;
   }
 }

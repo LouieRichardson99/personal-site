@@ -1,9 +1,9 @@
-@use './breakpoints' as *;
+@use "./breakpoints" as *;
 
 /* Fira Code */
 @font-face {
-  font-family: 'Fira Code';
-  src: url(../../public/fonts/FiraCode-Regular.ttf) format('ttf');
+  font-family: "Fira Code";
+  src: url(../../public/fonts/FiraCode-Regular.ttf) format("ttf");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -11,48 +11,48 @@
 
 /* Geist */
 @font-face {
-  font-family: 'Geist', sans-serif;
-  src: url(../../public/fonts/Geist-Thin.woff2) format('woff2');
+  font-family: "Geist", sans-serif;
+  src: url(../../public/fonts/Geist-Thin.woff2) format("woff2");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Geist', sans-serif;
-  src: url(../../public/fonts/Geist-Light.woff2) format('woff2');
+  font-family: "Geist", sans-serif;
+  src: url(../../public/fonts/Geist-Light.woff2) format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Geist', sans-serif;
-  src: url(../../public/fonts/Geist-Regular.woff2) format('woff2');
+  font-family: "Geist", sans-serif;
+  src: url(../../public/fonts/Geist-Regular.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Geist', sans-serif;
-  src: url(../../public/fonts/Geist-Medium.woff2) format('woff2');
+  font-family: "Geist", sans-serif;
+  src: url(../../public/fonts/Geist-Medium.woff2) format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Geist', sans-serif;
-  src: url(../../public/fonts/Geist-SemiBold.woff2) format('woff2');
+  font-family: "Geist", sans-serif;
+  src: url(../../public/fonts/Geist-SemiBold.woff2) format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Geist', sans-serif;
-  src: url(../../public/fonts/Geist-Bold.woff2) format('woff2');
+  font-family: "Geist", sans-serif;
+  src: url(../../public/fonts/Geist-Bold.woff2) format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -92,7 +92,7 @@ a {
   font-weight: 400;
   color: var(--color-fg);
   text-decoration-line: underline;
-  text-decoration-color: hsl(200, 90%, 50%);
+  text-decoration-color: var(--bright-blue);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }

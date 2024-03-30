@@ -1,5 +1,12 @@
 ---
-import Layout from '@components/Layout.astro'
+import Layout from "@components/Layout.astro";
+import { Image } from "astro:assets";
+import codeGardenImage from "@assets/codegarden.jpg";
+import ukFestImage1 from "@assets/speaking-at-ukfest-1.jpg";
+import feedingWallabiesImage from "@assets/feeding-wallabies.jpg";
+import ukFestImage2 from "@assets/speaking-at-ukfest-2.jpg";
+import { Icon } from "astro-icon/components";
+import Socials from "@components/Socials.astro";
 ---
 
 <Layout
@@ -10,10 +17,9 @@ import Layout from '@components/Layout.astro'
     <h1 class="title">👋🏻 Hey there, I'm Louie</h1>
     <div class="rich-text flow">
       <p>
-        I'm currently a front-end developer at <a
-          href="https://bump.digital"
-          target="_blank">Bump Digital</a
-        >. I have experience creating marketing sites and web applications using
+        I'm currently a front-end developer at
+        <a href="https://bump.digital" target="_blank">Bump Digital</a>. I have
+        experience creating marketing sites and web applications using
         cutting-edge technologies. Additionally, I have experience integrating
         headless CMS platforms like Prismic and Sanity to ensure seamless
         content management for marketing teams.
@@ -25,14 +31,45 @@ import Layout from '@components/Layout.astro'
         clients.
       </p>
     </div>
+    <div class="image-grid">
+      <Image
+        src={codeGardenImage}
+        alt="Bump team at CodeGarden 2023"
+        width={codeGardenImage.width}
+        height={codeGardenImage.height}
+        class="span-2"
+      />
+      <Image
+        src={ukFestImage1}
+        alt="Speaking at Umbraco UK Festival"
+        width={ukFestImage1.width}
+        height={ukFestImage1.height}
+      />
+      <Image
+        src={feedingWallabiesImage}
+        alt="Feeding wallabies in Australia"
+        width={feedingWallabiesImage.width}
+        height={feedingWallabiesImage.height}
+      />
+      <Image
+        src={ukFestImage2}
+        alt="Speaking at Umbraco UK Festival"
+        width={ukFestImage2.width}
+        height={ukFestImage2.height}
+        class="span-2"
+      />
+    </div>
     <div class="flex-container">
-      <a href="mailto:louie@louierichardson.com">Get in touch</a>
+      <a href="mailto:louie@louierichardson.com" class="contact-link">
+        Get in touch <Icon name="arrow-up-right" />
+      </a>
+      <Socials />
     </div>
   </section>
 </Layout>
 
 <style lang="scss">
-  @import '@styles/_breakpoints';
+  @import "@styles/_breakpoints";
 
   .title {
     margin-bottom: 1rem;
@@ -43,5 +80,48 @@ import Layout from '@components/Layout.astro'
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 300;
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+      margin-left: 0.25rem;
+      transition: all 200ms;
+    }
+
+    &:hover {
+      opacity: 0.85;
+      svg {
+        transform: translate(0.15rem, -0.15rem);
+      }
+    }
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin: 3rem 0;
+
+    @include mq(small) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .span-2 {
+      grid-column: span 2;
+    }
   }
 </style>
