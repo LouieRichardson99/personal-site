@@ -17,6 +17,10 @@
 
 html {
   font-family: "Geist", sans-serif;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
 }
 
 body {
