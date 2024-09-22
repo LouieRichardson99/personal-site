@@ -1,12 +1,13 @@
 ---
 import Layout from "@components/Layout.astro";
 import { Image } from "astro:assets";
-import codeGardenImage from "@assets/codegarden.jpg";
-import ukFestImage1 from "@assets/speaking-at-ukfest-1.jpg";
-import feedingWallabiesImage from "@assets/feeding-wallabies.jpg";
-import ukFestImage2 from "@assets/speaking-at-ukfest-2.jpg";
 import { Icon } from "astro-icon/components";
 import Socials from "@components/Socials.astro";
+import codegardenImage1 from "@assets/codegarden-group-1.jpeg";
+import codegardenImage2 from "@assets/codegarden-group-2.jpeg";
+import ukFestImage1 from "@assets/uk-fest-image-1.jpeg";
+import ukFestImage2 from "@assets/uk-fest-image-2.jpeg";
+import ukFestImage3 from "@assets/uk-fest-image-3.jpeg";
 ---
 
 <Layout
@@ -42,11 +43,11 @@ import Socials from "@components/Socials.astro";
     </div>
     <div class="image-grid">
       <Image
-        src={codeGardenImage}
-        alt="Bump team at CodeGarden 2023"
-        width={codeGardenImage.width}
-        height={codeGardenImage.height}
-        class="span-2"
+        src={ukFestImage2}
+        alt="Speaking at Umbraco UK Festival"
+        width={ukFestImage2.width}
+        height={ukFestImage2.height}
+        class="span-3"
         loading="eager"
       />
       <Image
@@ -55,21 +56,31 @@ import Socials from "@components/Socials.astro";
         width={ukFestImage1.width}
         height={ukFestImage1.height}
         loading="eager"
+        class="sm-hidden"
       />
       <Image
-        src={feedingWallabiesImage}
-        alt="Feeding wallabies in Australia"
-        width={feedingWallabiesImage.width}
-        height={feedingWallabiesImage.height}
-        loading="eager"
-      />
-      <Image
-        src={ukFestImage2}
-        alt="Speaking at Umbraco UK Festival"
-        width={ukFestImage2.width}
-        height={ukFestImage2.height}
+        src={codegardenImage1}
+        alt="Bump team at CodeGarden 2023"
+        width={codegardenImage1.width}
+        height={codegardenImage1.height}
         class="span-2"
         loading="eager"
+      />
+      <Image
+        src={codegardenImage2}
+        alt="Codegarden 2024 group photo"
+        width={codegardenImage2.width}
+        height={codegardenImage2.height}
+        class="span-2"
+        loading="eager"
+      />
+      <Image
+        src={ukFestImage3}
+        alt="Speaking at Umbraco UK Festival"
+        width={ukFestImage3.width}
+        height={ukFestImage3.height}
+        loading="eager"
+        class="span-4"
       />
     </div>
     <div class="flex-container">
@@ -123,7 +134,39 @@ import Socials from "@components/Socials.astro";
     margin: 3rem 0;
 
     @include mq(small) {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .sm-hidden {
+      display: none;
+
+      @include mq(small) {
+        display: block;
+      }
+    }
+
+    .span-2 {
+      grid-column: span 1;
+
+      @include mq(small) {
+        grid-column: span 2;
+      }
+    }
+
+    .span-3 {
+      grid-column: span 2;
+
+      @include mq(small) {
+        grid-column: span 3;
+      }
+    }
+
+    .span-4 {
+      grid-column: span 2;
+
+      @include mq(small) {
+        grid-column: span 4;
+      }
     }
 
     img {
@@ -131,10 +174,6 @@ import Socials from "@components/Socials.astro";
       height: 100%;
       object-fit: cover;
       border-radius: 5px;
-    }
-
-    .span-2 {
-      grid-column: span 2;
     }
   }
 </style>
