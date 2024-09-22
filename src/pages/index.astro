@@ -16,7 +16,7 @@ import ukFestImage3 from "@assets/uk-fest-image-3.jpeg";
 >
   <section>
     <div class="rich-text flow">
-      <h3>👋🏻 Howdy folks</h3>
+      <h3>Howdy <span class="wave-animation">👋🏻</span></h3>
       <p>
         I'm Louie, a web developer who's passionate about creating neat stuff
         for the web that drives results.
@@ -97,6 +97,42 @@ import ukFestImage3 from "@assets/uk-fest-image-3.jpeg";
 
   .title {
     margin-bottom: 1rem;
+  }
+
+  .wave-animation {
+    display: inline-block;
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+
+    @keyframes wave-animation {
+      0% {
+        transform: rotate(0deg);
+      }
+      10% {
+        transform: rotate(14deg);
+      }
+      20% {
+        transform: rotate(-8deg);
+      }
+      30% {
+        transform: rotate(14deg);
+      }
+      40% {
+        transform: rotate(-4deg);
+      }
+      50% {
+        transform: rotate(10deg);
+      }
+      60% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
   }
 
   .flex-container {
