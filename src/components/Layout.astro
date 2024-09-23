@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import SEO from "@components/SEO.astro";
 import Header from "@components/Header.astro";
 import "@styles/main.scss";
@@ -19,8 +20,9 @@ const { metaTitle, metaDescription, noIndex } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-    <SEO title={metaTitle} description={metaDescription} />
     {noIndex && <meta name="robots" content="noindex" />}
+    <SEO title={metaTitle} description={metaDescription} />
+    <ViewTransitions />
   </head>
   <body class="container">
     <Header />
