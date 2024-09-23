@@ -95,10 +95,10 @@ a {
   text-decoration-color: var(--bright-blue);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
-  transition: opacity 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 
   &:hover,
   &:focus {
-    opacity: 0.9;
+    color: var(--bright-blue);
   }
 }

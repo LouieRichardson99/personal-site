@@ -61,12 +61,13 @@ const socialLinks = [
       height: 1.25rem;
       object-fit: contain;
       color: var(--color-fg);
-      transition: 200ms all ease;
+      transition: 200ms color ease;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       svg {
-        opacity: 0.85;
+        color: var(--bright-blue);
       }
     }
   }
