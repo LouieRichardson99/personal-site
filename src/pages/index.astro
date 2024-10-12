@@ -11,33 +11,29 @@ import ukFestImage3 from "@assets/uk-fest-image-3.jpeg";
 ---
 
 <Layout
-  metaTitle="Louie Richardson - Web Developer"
+  metaTitle="Louie Richardson"
   metaDescription="I'm Louie, a web developer who's passionate about creating neat stuff for the web that drives results."
 >
   <section>
     <div class="rich-text flow">
-      <h3>Howdy <span class="wave-animation">👋🏻</span></h3>
       <p>
-        I'm Louie, a web developer who's passionate about creating neat stuff
-        for the web that drives results.
+        I'm a front-end developer with a curious mind, leading me down a rabbit
+        hole of playing around and experimenting with all the latest JavaScript
+        frameworks.
       </p>
       <p>
-        From design to development, I've worked with a range of clients.
-        Anything from animation studio marketing sites to web apps for Y
-        Combinator fintech startups.
+        I work at <a href="https://bumpdigital.co.uk">Bump Digital</a>, an
+        Umbraco Gold Partner agency. My tech stack includes HTML, CSS (SCSS),
+        JavaScript (ES6+), C#/.NET, and Umbraco CMS. I also work with JavaScript
+        frameworks such as Vue.js and Astro.
       </p>
       <p>
-        Not only do I love working with the latest web technologies and
-        integrating CMS' that allow teams to seamlessly manage their online
-        presence, I enjoy putting pen to paper to design something killer.
+        Occasionally, I speak at conferences and meetups. I love to get on stage
+        and share my enthusiam for modern web development to like-minded
+        individuals.
       </p>
       <p>
-        I've even had a stab at getting up on stage to share my enthusiasm to an
-        audience of like-minded tech folks.
-      </p>
-      <p>Anyhoo, that's the short of it.</p>
-      <p>Fancy a virtual coffee to discuss your next web project?</p>
-      <p>
+        If you'd like to get in touch, you can email me at
         <a href="mailto:louie@louierichardson.com">louie@louierichardson.com</a>
       </p>
     </div>
@@ -68,7 +64,7 @@ import ukFestImage3 from "@assets/uk-fest-image-3.jpeg";
       />
       <Image
         src={codegardenImage2}
-        alt="Codegarden 2024 group photo"
+        alt="Codegarden 2024 group"
         width={codegardenImage2.width}
         height={codegardenImage2.height}
         class="span-2"
@@ -79,7 +75,7 @@ import ukFestImage3 from "@assets/uk-fest-image-3.jpeg";
         alt="Speaking at Umbraco UK Festival"
         width={ukFestImage3.width}
         height={ukFestImage3.height}
-        loading="eager"
+        loading="lazy"
         class="span-4"
       />
     </div>
@@ -94,46 +90,6 @@ import ukFestImage3 from "@assets/uk-fest-image-3.jpeg";
 
 <style lang="scss">
   @import "@styles/_breakpoints";
-
-  .title {
-    margin-bottom: 1rem;
-  }
-
-  .wave-animation {
-    display: inline-block;
-    animation-name: wave-animation;
-    animation-duration: 2.5s;
-    animation-iteration-count: infinite;
-    transform-origin: 70% 70%;
-    display: inline-block;
-
-    @keyframes wave-animation {
-      0% {
-        transform: rotate(0deg);
-      }
-      10% {
-        transform: rotate(14deg);
-      }
-      20% {
-        transform: rotate(-8deg);
-      }
-      30% {
-        transform: rotate(14deg);
-      }
-      40% {
-        transform: rotate(-4deg);
-      }
-      50% {
-        transform: rotate(10deg);
-      }
-      60% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(0deg);
-      }
-    }
-  }
 
   .flex-container {
     margin-top: 1.5rem;

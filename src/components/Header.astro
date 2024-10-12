@@ -1,7 +1,7 @@
 <header>
   <nav>
+    <a href="/" class="name">Louie Richardson</a>
     <ul>
-      <li><a href="/">Home</a></li>
       <li><a href="/blog">Blog</a></li>
       <li><a href="mailto:louie@louierichardson.com">Contact</a></li>
     </ul>
@@ -9,8 +9,31 @@
 </header>
 
 <style lang="scss">
+  @import "@styles/_breakpoints";
+
   header {
-    padding: 1.5rem 0;
+    padding: 1.5rem 0 0.5rem;
+  }
+
+  .name {
+    font-weight: 500;
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+
+    @include mq(small) {
+      margin-bottom: 0;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+
+    @include mq(small) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   ul {
@@ -23,10 +46,11 @@
     font-weight: 400;
     color: var(--color-fg);
     text-decoration: none;
-    transition: 250ms opacity ease;
+    transition: 200ms color ease;
 
-    &:hover {
-      opacity: 0.85;
+    &:hover,
+    &:focus {
+      color: var(--bright-blue);
     }
   }
 </style>

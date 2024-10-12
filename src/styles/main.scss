@@ -6,12 +6,12 @@
 :root {
   --bright-blue: hsl(200, 90%, 50%);
 
-  --color-bg: hsl(0, 0%, 5%);
+  --color-bg: hsl(0, 0%, 8%);
   --color-fg: hsl(0, 0%, 95%);
 
   @media (prefers-color-scheme: light) {
     --color-bg: hsl(0, 0%, 95%);
-    --color-fg: hsl(0, 0%, 5%);
+    --color-fg: hsl(0, 0%, 8%);
   }
 }
 
@@ -29,7 +29,7 @@ body {
 }
 
 main {
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .container {

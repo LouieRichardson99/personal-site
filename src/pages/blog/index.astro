@@ -34,21 +34,10 @@ const allBlogPosts = await getCollection("blog");
 </Layout>
 
 <style lang="scss">
-  @import "@styles/_breakpoints";
-
-  section {
-    padding: 2rem 0;
-
-    @include mq("small") {
-      padding: 5rem 0;
-    }
-  }
-
-  .title {
-    margin-bottom: 2rem;
-  }
+  @import '@styles/_breakpoints';
 
   ul {
+    margin-top: 2rem;
     list-style: none;
 
     li {
