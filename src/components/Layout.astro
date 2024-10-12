@@ -1,5 +1,4 @@
 ---
-import { ViewTransitions } from "astro:transitions";
 import SEO from "@components/SEO.astro";
 import Header from "@components/Header.astro";
 import "@styles/main.scss";
@@ -22,7 +21,6 @@ const { metaTitle, metaDescription, noIndex } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     {noIndex && <meta name="robots" content="noindex" />}
     <SEO title={metaTitle} description={metaDescription} />
-    <ViewTransitions />
   </head>
   <body class="container">
     <Header />
