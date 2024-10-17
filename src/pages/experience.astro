@@ -9,7 +9,7 @@ import Socials from "@components/Socials.astro";
 >
   <section>
     <h1 class="title">Experience</h1>
-    <ul class="list">
+    <ul class="experience-list">
       <li>
         <div class="experience-item-header">
           <h4 class="company">Bump Digital</h4>
@@ -42,6 +42,20 @@ import Socials from "@components/Socials.astro";
         </p>
       </li>
     </ul>
+    <div class="certs">
+      <h2 class="certs-title">Certifications</h2>
+      <ul class="certs-list">
+        <li>
+          <p class="cert">Umbraco Master</p>
+          <p class="cert-details">
+            Issued: Sep 2024 | <a
+              href="https://umbraco.com/training/certified-developers/developer/?uid=40180"
+              target="_blank">Certification link</a
+            >
+          </p>
+        </li>
+      </ul>
+    </div>
     <div class="contact-info">
       <a href="mailto:louie@louierichardson.com">louie@louierichardson.com</a>
       <Socials />
@@ -52,8 +66,8 @@ import Socials from "@components/Socials.astro";
 <style lang="scss">
   @import "@styles/_breakpoints";
 
-  .list {
-    margin: 2rem 0 3rem;
+  .experience-list {
+    margin: 2rem 0;
     list-style: none;
   }
 
@@ -85,5 +99,25 @@ import Socials from "@components/Socials.astro";
   .contact-info {
     display: flex;
     justify-content: space-between;
+  }
+
+  .certs {
+    margin-bottom: 3rem;
+  }
+
+  .certs-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .certs-list {
+    list-style: none;
+  }
+
+  .cert-details {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    opacity: 0.8;
   }
 </style>
