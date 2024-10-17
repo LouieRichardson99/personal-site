@@ -1,0 +1,89 @@
+---
+import Layout from "@components/Layout.astro";
+import Socials from "@components/Socials.astro";
+---
+
+<Layout
+  metaTitle="Experience | Louie Richardson"
+  metaDescription="Louie Richardson's work and speaking experience"
+>
+  <section>
+    <h1 class="title">Experience</h1>
+    <ul class="list">
+      <li>
+        <div class="experience-item-header">
+          <h4 class="company">Bump Digital</h4>
+          <p class="position">Front-end Developer</p>
+          <p class="date">Mar 2023 - Present</p>
+        </div>
+        <p class="experience-description">
+          Currently I'm a front-end developer at <a
+            href="https://bumpdigital.co.uk"
+            target="_blank">Bump Digital</a
+          >, an award winning digital agency that provide Umbraco and Azure
+          solutions. My tech stack includes HTML, CSS (SCSS), JavaScript (ES6+),
+          C#/.NET, and Umbraco CMS.
+        </p>
+      </li>
+      <li>
+        <div class="experience-item-header">
+          <h4 class="company">Skyward Digital</h4>
+          <p class="position">Front-end Developer</p>
+          <p class="date">Jun 2021 - Jun 2022</p>
+        </div>
+        <p class="experience-description">
+          I worked as a freelance front-end developer for <a
+            href="https://skyward.digital"
+            target="_blank">Skyward Digital</a
+          >, a digital JAMstack agency. I got the chance to work on a large
+          marketing site and web application for a YCombinator backed startup.
+          We used a modern tech stack including React, Next.js, Tailwind CSS,
+          and Prismic CMS.
+        </p>
+      </li>
+    </ul>
+    <div class="contact-info">
+      <a href="mailto:louie@louierichardson.com">louie@louierichardson.com</a>
+      <Socials />
+    </div>
+  </section>
+</Layout>
+
+<style lang="scss">
+  @import "@styles/_breakpoints";
+
+  .list {
+    margin: 2rem 0 3rem;
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 2rem;
+  }
+
+  .experience-item-header {
+    margin-bottom: 1rem;
+  }
+
+  .company {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .position,
+  .date {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    opacity: 0.8;
+  }
+
+  .experience-description {
+    margin-bottom: 1rem;
+  }
+
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
