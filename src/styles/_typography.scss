@@ -64,19 +64,19 @@
 }
 
 h1 {
-  font-size: clamp(1.8rem, 5vw, 2rem);
+  font-size: clamp(1.4rem, 5vw, 1.5rem);
 }
 
 h2 {
-  font-size: clamp(1.6rem, 4vw, 1.8rem);
+  font-size: clamp(1.3rem, 4vw, 1.4rem);
 }
 
 h3 {
-  font-size: clamp(1.4rem, 3vw, 1.6rem);
+  font-size: clamp(1.2rem, 3vw, 1.3rem);
 }
 
 h4 {
-  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  font-size: clamp(1.125rem, 2vw, 1.2rem);
 }
 
 p {
@@ -104,6 +104,5 @@ a {
 }
 
 .title {
-  font-size: 1.25rem;
   font-weight: 500;
 }
