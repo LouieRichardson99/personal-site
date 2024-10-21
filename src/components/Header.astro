@@ -1,6 +1,28 @@
+---
+import Image from 'astro/components/Image.astro';
+import headerImage from '@assets/louie-richardson.jpeg';
+---
+
 <header>
   <nav>
-    <a href="/" class="name">Louie Richardson</a>
+    <div class="intro">
+      <a href="/">
+        <Image
+          src={headerImage}
+          alt="Louie Richardson"
+          width={headerImage.width}
+          height={headerImage.height}
+          loading="eager"
+          class="image"
+        />
+      </a>
+      <div>
+        <a href="/">
+          <p class="name">Louie Richardson</p>
+        </a>
+        <p class="position">Front-end Developer</p>
+      </div>
+    </div>
     <ul>
       <li><a href="/experience">Experience</a></li>
       <li><a href="/blog">Blog</a></li>
@@ -16,19 +38,28 @@
     padding-top: 1.5rem;
   }
 
-  .name {
-    font-weight: 700;
-    font-size: 1.15rem;
-    margin-bottom: 0.5rem;
+  .intro {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
 
-    @include mq(small) {
-      margin-bottom: 0;
-    }
+  .name {
+    font-size: 1.125rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .position {
+    font-size: 0.825rem;
+    line-height: 1;
+    opacity: 0.8;
   }
 
   nav {
     display: flex;
     flex-direction: column;
+    row-gap: 1rem;
 
     @include mq(small) {
       flex-direction: row;
@@ -52,6 +83,19 @@
     &:hover,
     &:focus {
       color: var(--bright-blue);
+    }
+  }
+
+  .image {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    transition: 200ms transform ease;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+      border: 1px solid var(--bright-blue);
     }
   }
 </style>
