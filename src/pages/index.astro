@@ -79,51 +79,17 @@ import ukFestImage3 from "@assets/uk-fest-image-3.jpeg";
         class="span-4"
       />
     </div>
-    <div class="flex-container">
-      <a href="mailto:louie@louierichardson.com" class="contact-link">
-        Get in touch <Icon name="arrow-up-right" />
-      </a>
-      <Socials />
-    </div>
   </section>
 </Layout>
 
 <style lang="scss">
-  @import "@styles/_breakpoints";
-
-  .flex-container {
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .contact-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-weight: 400;
-
-    svg {
-      width: 1rem;
-      height: 1rem;
-      margin-left: 0.25rem;
-      transition: transform 200ms;
-    }
-
-    &:hover,
-    &:focus {
-      svg {
-        transform: translate(0.15rem, -0.15rem);
-      }
-    }
-  }
+  @import '@styles/_breakpoints';
 
   .image-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
-    margin: 3rem 0;
+    margin: 3rem 0 0;
 
     @include mq(small) {
       grid-template-columns: repeat(4, 1fr);
