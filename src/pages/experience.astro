@@ -1,6 +1,7 @@
 ---
-import Layout from "@components/Layout.astro";
-import Socials from "@components/Socials.astro";
+import Layout from '@components/Layout.astro';
+import { Image } from 'astro:assets';
+import umbracoLogo from '@assets/umbraco-logo.webp';
 ---
 
 <Layout
@@ -46,13 +47,16 @@ import Socials from "@components/Socials.astro";
       <h2 class="certs-title">Certifications</h2>
       <ul class="certs-list">
         <li>
-          <p class="cert">Umbraco Master</p>
-          <p class="cert-details">
-            Issued: Sep 2024 | <a
-              href="https://umbraco.com/training/certified-developers/developer/?uid=40180"
-              target="_blank">Certification link</a
-            >
-          </p>
+          <Image src={umbracoLogo} alt="Umbraco logo" class="cert-logo" />
+          <div>
+            <p class="cert">Umbraco Master</p>
+            <p class="cert-details">
+              Issued: Sep 2024 | <a
+                href="https://umbraco.com/training/certified-developers/developer/?uid=40180"
+                target="_blank">Certification link</a
+              >
+            </p>
+          </div>
         </li>
       </ul>
     </div>
@@ -101,6 +105,12 @@ import Socials from "@components/Socials.astro";
   .certs-list {
     list-style: none;
 
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
     li:last-child {
       margin-bottom: 0;
     }
@@ -110,5 +120,15 @@ import Socials from "@components/Socials.astro";
     font-size: 0.875rem;
     line-height: 1.4;
     opacity: 0.8;
+  }
+
+  .cert-logo {
+    width: 2.25rem;
+    height: 2.25rem;
+    object-fit: contain;
+
+    @media (prefers-color-scheme: dark) {
+      filter: invert(1);
+    }
   }
 </style>
