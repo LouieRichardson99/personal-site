@@ -22,6 +22,10 @@ const { metaTitle, metaDescription, noIndex } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     {noIndex && <meta name="robots" content="noindex" />}
     <SEO title={metaTitle} description={metaDescription} />
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="b1cd21b2-a89c-40bd-a774-0b090083fbfe"></script>
   </head>
   <body class="container">
     <Header />
