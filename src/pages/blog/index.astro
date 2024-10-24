@@ -48,7 +48,7 @@ const allBlogPosts = await getCollection("blog");
 </Layout>
 
 <style lang="scss">
-  @import "@styles/_breakpoints";
+  @use '@styles/_breakpoints' as *;
 
   .title {
     &.small {
