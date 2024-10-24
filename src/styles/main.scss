@@ -1,24 +1,17 @@
-@use "./reset";
-@use "./breakpoints" as *;
-@use "./typography";
-
-:root {
-  --bright-blue: hsl(200, 90%, 50%);
-
-  --color-bg: hsl(0, 0%, 8%);
-  --color-fg: hsl(0, 0%, 95%);
-
-  @media (prefers-color-scheme: light) {
-    --color-bg: hsl(0, 0%, 98%);
-    --color-fg: hsl(0, 0%, 8%);
-  }
-}
+@use './reset';
+@use './breakpoints' as *;
+@use './typography';
 
 html {
-  font-family: "Geist", sans-serif;
+  --bright-blue: hsl(200, 90%, 50%);
+  --color-bg: hsl(0, 0%, 98%);
+  --color-fg: hsl(0, 0%, 8%);
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+  font-family: 'Geist', sans-serif;
+
+  &.dark {
+    --color-bg: hsl(0, 0%, 8%);
+    --color-fg: hsl(0, 0%, 95%);
   }
 }
 
@@ -31,7 +24,7 @@ body {
 main {
   padding: 2rem 0;
 
-  @include mq("small") {
+  @include mq('small') {
     padding: 3rem 0;
   }
 }
@@ -41,7 +34,7 @@ main {
   max-width: 50rem;
   margin: 0 auto;
 
-  @include mq("small") {
+  @include mq('small') {
     padding: 0 1.5rem;
   }
 }
@@ -66,7 +59,7 @@ main {
   border: 1px solid hsl(0, 0%, 18%);
 
   code {
-    font-family: "Fira Code";
+    font-family: 'Fira Code';
     font-size: 1rem;
   }
 }
