@@ -1,6 +1,7 @@
 ---
 import Layout from '@components/Layout.astro';
 import { Image } from 'astro:assets';
+import { Content } from '@markdown/homepage.md';
 import codegardenImage1 from '@assets/codegarden-group-1.jpeg';
 import codegardenImage2 from '@assets/codegarden-group-2.jpeg';
 import ukFestImage1 from '@assets/uk-fest-image-1.jpeg';
@@ -14,26 +15,7 @@ import ukFestImage3 from '@assets/uk-fest-image-3.jpeg';
 >
   <section>
     <div class="rich-text flow">
-      <p>
-        I'm a front-end developer with a curious mind, leading me down a rabbit
-        hole of playing around and experimenting with all the latest JavaScript
-        frameworks.
-      </p>
-      <p>
-        I work at <a href="https://bumpdigital.co.uk">Bump Digital</a>, an
-        Umbraco Gold Partner agency. My tech stack includes HTML, CSS (SCSS),
-        JavaScript (ES6+), C#/.NET, and Umbraco CMS. I also work with JavaScript
-        frameworks such as Vue.js and Astro.
-      </p>
-      <p>
-        Occasionally, I speak at conferences and meetups. I love to get on stage
-        and share my enthusiasm for modern web development to like-minded
-        individuals.
-      </p>
-      <p>
-        If you'd like to get in touch, you can email me at
-        <a href="mailto:louie@louierichardson.com">louie@louierichardson.com</a>
-      </p>
+      <Content />
     </div>
     <div class="image-grid">
       <Image

@@ -9,7 +9,8 @@
       "@utils/*": ["src/utils/*"],
       "@styles/*": ["src/styles/*"],
       "@public/*": ["public/*"],
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@markdown/*": ["src/markdown/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react",
