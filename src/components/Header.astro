@@ -1,6 +1,7 @@
 ---
 import Image from 'astro/components/Image.astro';
 import headerImage from '@assets/louie-richardson.jpeg';
+import ThemeSwitcher from './ThemeSwitcher.astro';
 ---
 
 <header>
@@ -21,11 +22,14 @@ import headerImage from '@assets/louie-richardson.jpeg';
         <p class="position">Front-end Developer</p>
       </div>
     </div>
-    <ul>
-      <li><a href="/experience">Experience</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="mailto:louie@louierichardson.com">Contact</a></li>
-    </ul>
+    <div class="nav-wrapper">
+      <ul>
+        <li><a href="/experience">Experience</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="mailto:louie@louierichardson.com">Contact</a></li>
+      </ul>
+      <ThemeSwitcher />
+    </div>
   </nav>
 </header>
 
@@ -52,6 +56,12 @@ import headerImage from '@assets/louie-richardson.jpeg';
     font-size: 0.825rem;
     line-height: 1;
     opacity: 0.8;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
   }
 
   nav {
