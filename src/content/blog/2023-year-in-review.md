@@ -20,7 +20,7 @@ June was a great month as I attended Codegarden in Denmark. This was 3 days pack
 
 Maybe Il get the chance to speak at Codegarden 2024? Which reminds me, I should probably start thinking of talk ideas!
 
-![The team at Bump Digital](../../assets/bump-digital-team-photo.png)
+![](2023-year-in-review/bump-digital-team-photo.png)
 
 I became an Umbraco Professional by completing my Umbraco Fundamentals training at the start of October and I plan to complete more Umbraco training in the first quarter of 2024 in hopes of becoming a Umbraco Master.
 
@@ -34,11 +34,11 @@ As soon as I got up there to speak I was pleasantly surprised to find that the n
 
 Here's a few pictures from my talk:
 
-![Louie speaking in front of a crowd at Umbraco UK Festival](../../assets/ukfest-talk.jpeg)
+![](2023-year-in-review/ukfest-talk.jpeg)
 
-![Louie showing the reasons to use Astro on stage screen](../../assets/reasons-to-use-astro-on-stage-screen.png)
+![](2023-year-in-review/reasons-to-use-astro-on-stage-screen.png)
 
-![Louie showing network tab in Arc](../../assets/astro-network-tab.png)
+![](2023-year-in-review/astro-network-tab.png)
 
 If you are ever thinking about whether to do more public speaking or even to just get started, I'd definitely recommend it! It may feel daunting at first but it can actually feel really enjoyable in the moment when the adrenaline kicks in. Surprisingly you come away from the experience wanting to do more of it.
 
@@ -46,9 +46,9 @@ If you are ever thinking about whether to do more public speaking or even to jus
 
 In December, we wrapped up the year with a team trip to Cologne in Germany to explore round the Christmas markets drinking mulled wine and eating great food.
 
-![People ice skating in at Cologne christmas markets](../../assets/cologne-ice-skating.png)
+![](2023-year-in-review/cologne-ice-skating.png)
 
-![Busy christmas markets in Cologne](../../assets/busy-christmas-markets-cologne.png)
+![](2023-year-in-review/busy-christmas-markets-cologne.png)
 
 I had a great end to the year by getting my article published on 24Days.in ([Astro-nomically Performant Websites using the Content Delivery API](https://24days.in/umbraco-cms/2023/sustainable-performant/astronomically-performant/)). I wanted to write an article based on the talk I did at Umbraco UK Festival in November.
 
