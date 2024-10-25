@@ -1,6 +1,6 @@
 ---
 title: '2023: Year In-Review'
-description: 'Looking back at 2023; it was a great year in terms of my career and personal development.'
+description: Looking back at 2023; it was a great year in terms of my career and personal development.
 publishDate: 2024-01-02
 ---
 

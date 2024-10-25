@@ -1,6 +1,6 @@
 ---
-title: 'My Thoughts on Artificial Intelligence as a Web Developer'
-description: 'Sharing my thoughts on what artificial intelligence might mean for the future of the job market.'
+title: My Thoughts on Artificial Intelligence as a Web Developer
+description: Sharing my thoughts on what artificial intelligence might mean for the future of the job market.
 publishDate: 2023-04-02
 ---
 

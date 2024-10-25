@@ -1,6 +1,6 @@
 ---
-title: 'How I Became a Self-taught Front-end Developer'
-description: "Let's discuss my journey to becoming a self-taught front-end developer from zero, and some of the mistakes I made along the way!"
+title: How I Became a Self-taught Front-end Developer
+description: Let's discuss my journey to becoming a self-taught front-end developer from zero, and some of the mistakes I made along the way!
 publishDate: 2023-09-11
 ---
 
