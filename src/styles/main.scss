@@ -6,8 +6,10 @@ html {
   --bright-blue: hsl(200, 90%, 50%);
   --color-bg: hsl(0, 0%, 98%);
   --color-fg: hsl(0, 0%, 8%);
+  --font-primary: 'Geist', sans-serif;
+  --font-code: 'JetBrains Mono';
 
-  font-family: 'Geist', sans-serif;
+  font-family: var(--font-primary);
 
   &.dark {
     --color-bg: hsl(0, 0%, 8%);
@@ -64,7 +66,7 @@ main {
   border: 1px solid hsl(0, 0%, 18%);
 
   code {
-    font-family: 'Fira Code';
+    font-family: var(--font-code);
     font-size: 1rem;
   }
 }
