@@ -30,7 +30,6 @@ const { Content } = await post.render();
         })
       }
     </time>
-    <h1 class="title">{post.data.title}</h1>
     <article class="rich-text flow">
       <Content />
     </article>
@@ -46,7 +45,7 @@ const { Content } = await post.render();
     opacity: 0.5;
   }
 
-  .title {
+  :global(h1) {
     margin-bottom: 2rem;
   }
 </style>

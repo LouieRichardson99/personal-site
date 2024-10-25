@@ -4,6 +4,8 @@ description: Sharing my thoughts on what artificial intelligence might mean for 
 publishDate: 2023-04-02
 ---
 
+# My Thoughts on Artificial Intelligence as a Web Developer
+
 [Artificial intelligence (AI)](https://en.wikipedia.org/wiki/Artificial_intelligence) is going to transform the way we work; a tool that provides great efficiency benefits whilst being able to off load the mundane and repetitive tasks.
 
 Maybe I'm being too optimistic, but I don't believe that AI will steal _all_ our jobs, actually I believe it's going to create an abundance of new interesting and exciting jobs.
