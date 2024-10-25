@@ -7,7 +7,11 @@ interface Props {
   allBlogPosts: CollectionEntry<"blog">;
 }
 
-const allBlogPosts = await getCollection("blog");
+const allBlogPosts = await getCollection("blog").then((collection) =>
+  collection.sort((a, b) => {
+    return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime();
+  })
+);
 ---
 
 <Layout
