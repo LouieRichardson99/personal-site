@@ -44,6 +44,11 @@ main {
 }
 
 .rich-text {
+  ul,
+  ol {
+    padding-left: 1.75rem;
+  }
+
   img {
     width: 100%;
     height: auto;
