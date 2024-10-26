@@ -6,14 +6,20 @@ html {
   --bright-blue: hsl(200, 90%, 50%);
   --color-bg: hsl(0, 0%, 98%);
   --color-fg: hsl(0, 0%, 8%);
+  --scrollbar-color: hsl(0, 0%, 70%);
+  --scrollbar-track: hsl(0, 0%, 90%);
   --font-primary: 'Geist', sans-serif;
   --font-code: 'JetBrains Mono';
 
   font-family: var(--font-primary);
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-color) var(--scrollbar-track);
 
   &.dark {
     --color-bg: hsl(0, 0%, 8%);
     --color-fg: hsl(0, 0%, 95%);
+    --scrollbar-color: hsl(0, 0%, 20%);
+    --scrollbar-track: hsl(0, 0%, 10%);
   }
 }
 
