@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import icon from 'astro-icon';
 import remarkCodeTitles from 'remark-code-titles';
+import markdownRelativeLinks from './src/utils/markdownRelativeLinks';
 
 export default defineConfig({
   site: 'https://www.louierichardson.com',
@@ -21,6 +22,6 @@ export default defineConfig({
       langs: ['js', 'html', 'css', 'astro'],
       wrap: false
     },
-    remarkPlugins: [remarkCodeTitles]
+    remarkPlugins: [remarkCodeTitles, markdownRelativeLinks]
   }
 });
