@@ -12,6 +12,14 @@ const allBlogPosts = await getCollection("blog").then((collection) =>
     return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime();
   })
 );
+
+const publications = [
+  {
+    title: "Astro-nomically Performant Websites using the Content Delivery API",
+    url: "https://24days.in/umbraco-cms/2023/sustainable-performant/astronomically-performant/",
+    date: "2023-12-23",
+  },
+];
 ---
 
 <Layout
@@ -35,17 +43,23 @@ const allBlogPosts = await getCollection("blog").then((collection) =>
       }
     </ul>
     <div>
-      <h2 class="title small">Other Publications</h2>
+      <h2 class="title small">Publications</h2>
       <ul>
-        <li>
-          <time datetime="2023-23-12">23/12/2023</time>
-          <a
-            href="https://24days.in/umbraco-cms/2023/sustainable-performant/astronomically-performant/"
-            target="_blank"
-          >
-            Astro-nomically Performant Websites using the Content Delivery API
-          </a>
-        </li>
+        {
+          publications.map((publication) => (
+            <li>
+              <time datetime={`${publication.date}`}>
+                {new Date(publication.date).toLocaleDateString('en-GB')}
+              </time>
+              <a class="link" href={publication.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {publication.title}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </section>
