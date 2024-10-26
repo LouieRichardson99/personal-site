@@ -37,7 +37,9 @@ As soon as I got up there to speak I was pleasantly surprised to find that the n
 Here's a few pictures from my talk:
 
 ![](2023-year-in-review/ukfest-talk.jpeg)
+
 ![](2023-year-in-review/reasons-to-use-astro-on-stage-screen.png)
+
 ![](2023-year-in-review/astro-network-tab.png)
 
 If you are ever thinking about whether to do more public speaking or even to just get started, I'd definitely recommend it! It may feel daunting at first but it can actually feel really enjoyable in the moment when the adrenaline kicks in. Surprisingly you come away from the experience wanting to do more of it.
@@ -47,6 +49,7 @@ If you are ever thinking about whether to do more public speaking or even to jus
 In December, we wrapped up the year with a team trip to Cologne in Germany to explore round the Christmas markets drinking mulled wine and eating great food.
 
 ![](2023-year-in-review/cologne-ice-skating.png)
+
 ![](2023-year-in-review/busy-christmas-markets-cologne.png)
 
 I had a great end to the year by getting my article published on 24Days.in ([Astro-nomically Performant Websites using the Content Delivery API](https://24days.in/umbraco-cms/2023/sustainable-performant/astronomically-performant/)). I wanted to write an article based on the talk I did at Umbraco UK Festival in November.
