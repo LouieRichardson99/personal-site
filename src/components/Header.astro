@@ -5,7 +5,7 @@ import ThemeSwitcher from './ThemeSwitcher.astro';
 ---
 
 <header>
-  <nav>
+  <nav class="container">
     <div class="intro">
       <a href="/">
         <Image
@@ -37,7 +37,12 @@ import ThemeSwitcher from './ThemeSwitcher.astro';
   @use '@styles/_breakpoints' as *;
 
   header {
-    padding-top: 1.5rem;
+    background-color: var(--color-bg);
+    position: sticky;
+    top: 0;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid
+      color-mix(in srgb, var(--color-fg), var(--color-bg) 90%);
   }
 
   .intro {

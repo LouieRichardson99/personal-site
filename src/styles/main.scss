@@ -24,10 +24,10 @@ body {
 }
 
 main {
-  padding: 2rem 0;
+  padding: 2rem 0 3rem;
 
   @include mq('small') {
-    padding: 3rem 0;
+    padding: 2.5rem 0 4rem;
   }
 }
 

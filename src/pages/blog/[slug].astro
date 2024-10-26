@@ -20,7 +20,7 @@ const { Content } = await post.render();
 ---
 
 <Layout metaTitle={post.data.title} metaDescription={post.data.description}>
-  <section>
+  <section class="container">
     <time>
       {
         new Date(post.data.publishDate).toLocaleDateString("en-GB", {
