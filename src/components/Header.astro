@@ -2,33 +2,41 @@
 import Image from 'astro/components/Image.astro';
 import headerImage from '@assets/louie-richardson.jpeg';
 import ThemeSwitcher from './ThemeSwitcher.astro';
+import { Icon } from 'astro-icon/components';
 ---
 
 <header>
   <nav class="container">
     <div class="intro">
-      <a href="/">
-        <Image
-          src={headerImage}
-          alt="Louie Richardson"
-          loading="eager"
-          class="image"
-        />
-      </a>
-      <div>
+      <div class="inner-intro-container">
         <a href="/">
-          <p class="name">Louie Richardson</p>
+          <Image
+            src={headerImage}
+            alt="Louie Richardson"
+            loading="eager"
+            class="image"
+          />
         </a>
-        <p class="position">Front-end Developer</p>
+        <div>
+          <a href="/">
+            <p class="name">Louie Richardson</p>
+          </a>
+          <p class="position">Front-end Developer</p>
+        </div>
       </div>
+      <button class="burger-menu" aria-label="Open navigation menu">
+        <Icon name="menu-icon" />
+      </button>
     </div>
     <div class="nav-wrapper">
-      <ul>
-        <li><a href="/experience">Experience</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="mailto:louie@louierichardson.com">Contact</a></li>
-      </ul>
-      <ThemeSwitcher />
+      <div class="nav-wrapper-inner">
+        <ul>
+          <li><a href="/experience">Experience</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="mailto:louie@louierichardson.com">Contact</a></li>
+        </ul>
+        <ThemeSwitcher />
+      </div>
     </div>
   </nav>
 </header>
@@ -40,7 +48,7 @@ import ThemeSwitcher from './ThemeSwitcher.astro';
     background-color: var(--color-bg);
     position: sticky;
     top: 0;
-    padding: 1.5rem 0;
+    padding: 1.25rem 0;
     border-bottom: 1px solid
       color-mix(in srgb, var(--color-fg), var(--color-bg) 90%);
     z-index: 1000;
@@ -48,8 +56,47 @@ import ThemeSwitcher from './ThemeSwitcher.astro';
 
   .intro {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .inner-intro-container {
+    display: flex;
     align-items: center;
     gap: 0.75rem;
+  }
+
+  .burger-menu {
+    background-color: color-mix(in srgb, var(--color-fg), var(--color-bg) 95%);
+    display: block;
+    padding: 0.5rem;
+    border: 1px solid color-mix(in srgb, var(--color-fg), var(--color-bg) 85%);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+
+    @include mq(small) {
+      display: none;
+    }
+
+    svg {
+      color: var(--color-fg);
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: color-mix(
+        in srgb,
+        var(--color-fg),
+        var(--color-bg) 90%
+      );
+    }
   }
 
   .name {
@@ -65,20 +112,48 @@ import ThemeSwitcher from './ThemeSwitcher.astro';
   }
 
   .nav-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition:
+      200ms grid-template-rows ease,
+      200ms padding-top ease,
+      500ms opacity ease,
+      500ms visibility ease;
+    opacity: 0;
+    visibility: hidden;
+
+    @include mq(small) {
+      grid-template-rows: 1fr;
+      padding-top: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .nav-wrapper-inner {
     display: flex;
     align-items: center;
     gap: 1.25rem;
+    overflow-y: hidden;
   }
 
   nav {
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
 
     @include mq(small) {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+    }
+
+    &[open] {
+      .nav-wrapper {
+        grid-template-rows: 1fr;
+        padding-top: 1.5rem;
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
 
@@ -113,3 +188,19 @@ import ThemeSwitcher from './ThemeSwitcher.astro';
     }
   }
 </style>
+
+<script is:inline>
+  const burgerMenu = document.querySelector('.burger-menu');
+  let menuOpen = false;
+
+  if (burgerMenu) {
+    burgerMenu.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      document.querySelector('nav')?.toggleAttribute('open');
+      burgerMenu.setAttribute(
+        'aria-label',
+        menuOpen ? 'Close navigation menu' : 'Open navigation menu'
+      );
+    });
+  }
+</script>
