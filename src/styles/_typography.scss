@@ -117,3 +117,10 @@ table {
 .title {
   font-weight: 500;
 }
+
+p code {
+  background-color: color-mix(in srgb, var(--color-fg), var(--color-bg) 90%);
+  padding: 0.25rem;
+  border-radius: 5px;
+  border: 1px solid color-mix(in srgb, var(--color-fg), var(--color-bg) 80%);
+}
