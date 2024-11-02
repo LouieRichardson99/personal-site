@@ -1,0 +1,149 @@
+---
+import Layout from '@components/Layout.astro';
+
+interface Project {
+  title: string;
+  description: string;
+  links: {
+    href: string;
+    text: string;
+  }[];
+  technologies: string[];
+}
+
+const projects = [
+  {
+    title: 'JavaScript Umbraco Client',
+    description:
+      'A JavaScript client for the Umbraco Content Delivery API. This client is designed to make interacting with the Content Delivery API easier and more intuitive.',
+    links: [
+      {
+        href: 'https://github.com/LouieRichardson99/umbraco-client',
+        text: 'GitHub'
+      },
+      {
+        href: 'https://www.npmjs.com/package/umbraco-client',
+        text: 'npm'
+      }
+    ],
+    technologies: ['TypeScript']
+  },
+  {
+    title: 'Scribble Room Animation Website',
+    description:
+      'A marketing site I designed and built for Scribble Room Animation in Bristol, UK. I worked with Scribble Room to create a fun and playful website that showcases their 2D animation work and services.',
+    links: [
+      {
+        href: 'https://scribbleroomanimation.com',
+        text: 'View website'
+      }
+    ],
+    technologies: ['React', 'Next.js', 'SCSS', 'Prismic CMS']
+  }
+] as Project[];
+---
+
+<Layout
+  metaTitle="Projects | Louie Richardson"
+  metaDescription="Some of the projects I've worked on over the years"
+>
+  <section class="container">
+    <h1 class="title">Projects</h1>
+    <ul class="projects-list">
+      {
+        projects.map((project) => (
+          <li class="project">
+            <h2 class="project-title">{project.title}</h2>
+            <p class="project-description">{project.description}</p>
+            <div class="flex-container">
+              <div class="project-technologies">
+                {project.technologies.map((tech) => (
+                  <span>{tech}</span>
+                ))}
+              </div>
+              <div class="project-links">
+                {project.links.map((link) => (
+                  <a href={link.href}>{link.text}</a>
+                ))}
+              </div>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>
+
+<style lang="scss">
+  @use '@styles/_breakpoints' as *;
+
+  .projects-list {
+    margin: 2rem 0;
+    list-style: none;
+  }
+
+  .project {
+    margin-bottom: 3rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .project-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 0.75rem;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include mq(small) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .project-technologies {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    order: 1;
+
+    @include mq(small) {
+      order: 2;
+      margin-bottom: 0;
+    }
+
+    span {
+      background-color: color-mix(
+        in srgb,
+        var(--color-fg),
+        var(--color-bg) 95%
+      );
+      font-size: 0.875rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+    }
+  }
+
+  .project-links {
+    display: flex;
+    gap: 0.75rem;
+    order: 2;
+
+    @include mq(small) {
+      order: 1;
+    }
+  }
+</style>

@@ -16,6 +16,7 @@ const activeLink = (path: string) => {
 
 const links = [
   { href: '/experience', text: 'Experience' },
+  { href: '/projects', text: 'Projects' },
   { href: '/blog', text: 'Blog' },
   { href: 'mailto:louie@louierichardson.com', text: 'Contact' }
 ] as Link[];
@@ -105,7 +106,7 @@ links.forEach((link) => {
     cursor: pointer;
     transition: background-color 200ms ease;
 
-    @include mq(small) {
+    @include mq(medium) {
       display: none;
     }
 
@@ -148,7 +149,7 @@ links.forEach((link) => {
     opacity: 0;
     visibility: hidden;
 
-    @include mq(small) {
+    @include mq(medium) {
       grid-template-rows: 1fr;
       padding-top: 0;
       opacity: 1;
@@ -167,7 +168,7 @@ links.forEach((link) => {
     display: flex;
     flex-direction: column;
 
-    @include mq(small) {
+    @include mq(medium) {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
