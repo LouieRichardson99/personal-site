@@ -11,7 +11,7 @@ interface Link {
 }
 
 const activeLink = (path: string) => {
-  return Astro.url.pathname === path;
+  return Astro.url.pathname.replaceAll('/', '') === path.replaceAll('/', '');
 };
 
 const links = [
