@@ -3,6 +3,26 @@ import Image from 'astro/components/Image.astro';
 import headerImage from '@assets/louie-richardson.jpeg';
 import ThemeSwitcher from './ThemeSwitcher.astro';
 import { Icon } from 'astro-icon/components';
+
+interface Link {
+  href: string;
+  text: string;
+  active?: boolean;
+}
+
+const activeLink = (path: string) => {
+  return Astro.url.pathname === path;
+};
+
+const links = [
+  { href: '/experience', text: 'Experience' },
+  { href: '/blog', text: 'Blog' },
+  { href: 'mailto:louie@louierichardson.com', text: 'Contact' }
+] as Link[];
+
+links.forEach((link) => {
+  link.active = activeLink(link.href);
+});
 ---
 
 <header>
@@ -31,9 +51,15 @@ import { Icon } from 'astro-icon/components';
     <div class="nav-wrapper">
       <div class="nav-wrapper-inner">
         <ul>
-          <li><a href="/experience">Experience</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="mailto:louie@louierichardson.com">Contact</a></li>
+          {
+            links.map((link) => (
+              <li>
+                <a href={link.href} class:list={[{ active: link.active }]}>
+                  {link.text}
+                </a>
+              </li>
+            ))
+          }
         </ul>
         <ThemeSwitcher />
       </div>
@@ -169,9 +195,16 @@ import { Icon } from 'astro-icon/components';
     text-decoration: none;
     transition: 200ms color ease;
 
+    &.active {
+      text-decoration-line: underline;
+      text-decoration-color: var(--bright-blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
     &:hover,
     &:focus {
-      color: var(--bright-blue);
+      color: color-mix(in srgb, var(--color-fg), var(--color-bg) 25%);
     }
   }
 
