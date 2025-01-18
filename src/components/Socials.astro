@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon/components";
+import { Icon } from 'astro-icon/components';
 
 interface Map {
   [key: string]: string;
@@ -7,29 +7,34 @@ interface Map {
 
 const socialIcons: Map = {
   // Used as filename from /src/icons/filename.svg in astro-icon
-  github: "github",
-  linkedIn: "linkedin",
-  x: "x",
-  rss: "rss",
+  github: 'github',
+  linkedIn: 'linkedin',
+  x: 'x',
+  rss: 'rss',
+  youtube: 'youtube'
 };
 
 const socialLinks = [
   {
-    type: "github",
-    link: "https://github.com/LouieRichardson99",
+    type: 'github',
+    link: 'https://github.com/LouieRichardson99'
   },
   {
-    type: "linkedIn",
-    link: "https://www.linkedin.com/in/louie-richardson/",
+    type: 'youtube',
+    link: 'https://youtube.com/@louierichardson99?si=-NNYnkw5N2GJrD5O'
   },
   {
-    type: "x",
-    link: "https://twitter.com/Louie_Rich99",
+    type: 'linkedIn',
+    link: 'https://www.linkedin.com/in/louie-richardson/'
   },
   {
-    type: "rss",
-    link: "/rss.xml",
+    type: 'x',
+    link: 'https://twitter.com/Louie_Rich99'
   },
+  {
+    type: 'rss',
+    link: '/rss.xml'
+  }
 ];
 ---
 
