@@ -10,9 +10,9 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/rss": "^4.0.9",
-		"@astrojs/sitemap": "^1.4.0",
-		"astro": "^4.5.12",
+		"@astrojs/rss": "^4.0.11",
+		"@astrojs/sitemap": "^3.2.1",
+		"astro": "^5.5.2",
 		"astro-icon": "^1.1.0",
 		"remark-code-titles": "^0.1.2",
 		"unist-util-visit": "^5.0.0"
