@@ -14,12 +14,12 @@ const activeLink = (path: string) => {
   return Astro.url.pathname.replaceAll('/', '') === path.replaceAll('/', '');
 };
 
-const links = [
+const links: Link[] = [
   { href: '/experience', text: 'Experience' },
   { href: '/projects', text: 'Projects' },
   { href: '/blog', text: 'Blog' },
   { href: 'mailto:louie@louierichardson.com', text: 'Contact' }
-] as Link[];
+];
 
 links.forEach((link) => {
   link.active = activeLink(link.href);
